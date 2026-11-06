@@ -1,0 +1,37 @@
+{
+ "rest": {
+  "title": "Capybara (Hydrochoerus hydrochaeris)",
+  "author": "Charles J. Sharp",
+  "license": "BY-SA",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "https://commons.wikimedia.org/w/index.php?curid=44254293"
+ },
+ "bird": {
+  "title": "File:Yellow-headed caracara (Milvago chimachima) on capybara (Hydrochoeris hydrochaeris).JPG",
+  "author": "Charles J Sharp",
+  "license": "BY-SA",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "https://commons.wikimedia.org/w/index.php?curid=44225987"
+ },
+ "swim": {
+  "title": "Capybara swimming",
+  "author": "Bob Johnson",
+  "license": "BY-SA",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "https://commons.wikimedia.org/w/index.php?curid=85334252"
+ },
+ "eat": {
+  "title": "Capybara Eating Hay 11 11 2018",
+  "author": "Eric Kilby",
+  "license": "BY-SA",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "source": "https://commons.wikimedia.org/w/index.php?curid=112395009"
+ },
+ "latte": {
+  "title": "Latte art 3",
+  "author": "Kim Sanso",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/w/index.php?curid=70214602"
+ }
+}

@@ -1,0 +1,7 @@
+sites/*/_photos/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+_shots/
+_stage/

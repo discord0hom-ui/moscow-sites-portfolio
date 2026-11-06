@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Атмосфера — свадебный салон и фотостудия на Мытной</title>
+<meta name="description" content="«Атмосфера»: свадебные платья, женская одежда и фотостудия. Мытная улица, 27, вход с торца. Каждый день 12:00–20:00. 5,0 в 2ГИС по 22 отзывам.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Атмосфера — примерка свадебного платья">
+<meta property="og:image" content="img/mannequins.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='none' stroke='%23A88B6A' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/kit.css">
+<style>
+:root{
+  --pearl:#EDEDEF; --white:#FAFAFB; --blush:#E9C9C6; --champ:#A88B6A; --ink:#2A2527; --ink2:#67606A; --line:#D3D1D6;
+  --kit-accent:var(--ink); --kit-on-accent:var(--white); --kit-ink:var(--ink); --kit-line:var(--line); --kit-radius:999px; --kit-focus:var(--champ);
+}
+*{box-sizing:border-box}
+body{margin:0;font:400 17px/1.65 "Golos Text",system-ui,sans-serif;color:var(--ink);background:var(--pearl)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:Forum,Georgia,serif;font-weight:400;margin:0;line-height:1.02}
+.wrap{width:min(1240px,100% - 32px);margin-inline:auto}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:20px 0}
+.top b{font:400 28px/1 Forum;letter-spacing:.04em}
+.top nav{display:flex;gap:20px;font-size:15px}
+.top nav a{text-decoration:none}
+@media (max-width:640px){.top nav a:not(:last-child){display:none}}
+
+/* лукбук: горизонтальная лента с прокруткой и привязкой */
+.look{display:grid;grid-auto-flow:column;grid-template-columns:min(86vw,500px);grid-auto-columns:minmax(300px,30vw);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:max(16px,calc(50vw - 620px));
+  padding:8px max(16px,calc(50vw - 620px)) 22px;scrollbar-width:thin}
+.look>*{scroll-snap-align:start}
+.look .lead{display:flex;flex-direction:column;justify-content:flex-end;padding:0 24px 0 0}
+.look h1{font-size:clamp(44px,5vw,80px)}
+.look .lead p{color:var(--ink2);margin:18px 0 24px;max-width:34ch}
+.look figure{margin:0;position:relative}
+.look figure img{width:100%;height:min(74vh,640px);object-fit:cover;border-radius:4px}
+.look figcaption{position:absolute;left:14px;bottom:14px;background:var(--white);padding:6px 12px;border-radius:999px;font-size:13px}
+.look .note{background:var(--blush);border-radius:4px;padding:28px;display:flex;flex-direction:column;justify-content:space-between}
+.look .note h2{font-size:clamp(30px,3vw,42px)}
+.hint{font-size:14px;color:var(--ink2);text-align:right;padding-right:max(16px,calc(50vw - 620px))}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;min-height:52px;padding:0 26px;border-radius:999px;background:var(--ink);color:var(--white);text-decoration:none;font-weight:500;border:1.5px solid var(--ink)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn:hover{background:var(--champ);border-color:var(--champ);color:#fff}
+
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,3vw,40px);padding:clamp(56px,8vw,110px) 0;border-top:1px solid var(--line);margin-top:clamp(40px,6vw,80px)}
+.three h2{font-size:clamp(28px,3vw,40px);margin-bottom:10px}
+.three p{margin:0;color:var(--ink2)}
+.three .n{font:400 18px Forum;color:var(--champ);display:block;margin-bottom:12px}
+
+.fit{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,64px);padding:clamp(48px,7vw,96px) 0;border-top:1px solid var(--line)}
+.fit h2{font-size:clamp(36px,4.6vw,64px);margin-bottom:16px}
+.fit p{margin:0 0 10px;color:var(--ink2)}
+.fit a{color:var(--ink)}
+.now.is-open{color:#3E7A50}.now.is-closed{color:#A0453A}
+form{background:var(--white);border-radius:24px;padding:clamp(20px,3vw,36px);display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.f{display:grid;gap:6px}.f.w{grid-column:1/-1}
+label{font-size:14px;font-weight:500}
+input,select{font:inherit;padding:12px 16px;border:1px solid var(--line);border-radius:999px;background:var(--pearl);width:100%}
+form .btn{grid-column:1/-1;justify-self:start;cursor:pointer;font:inherit;font-weight:500}
+footer{border-top:1px solid var(--line);padding:24px 0 44px;font-size:14px;color:var(--ink2)}
+@media (max-width:860px){.three,.fit,form{grid-template-columns:1fr}.look{grid-auto-columns:78vw;grid-template-columns:86vw}}
+</style>
+</head>
+<body data-hours='{"0":["12:00","20:00"],"1":["12:00","20:00"],"2":["12:00","20:00"],"3":["12:00","20:00"],"4":["12:00","20:00"],"5":["12:00","20:00"],"6":["12:00","20:00"]}'>
+<a class="skip-link" href="#main">К содержанию</a>
+<div class="wrap"><header class="top"><b>Атмосфера</b><nav aria-label="Разделы"><a href="#salon">Салон</a><a href="#primerka">Примерка</a><a href="tel:+79197234397">+7 919 723-43-97</a></nav></header></div>
+<main id="main">
+  <section class="look" aria-labelledby="h1" tabindex="0">
+    <div class="lead">
+      <h1 id="h1">Платье, в котором вы — это вы</h1>
+      <p>Свадебный салон и фотостудия на Мытной улице. Приходите на примерку — с мамой, подругой или одна.</p>
+      <div class="btns"><a class="btn" href="#primerka">Записаться на примерку</a><a class="btn ghost" href="https://wa.me/79197234397" target="_blank" rel="noopener">WhatsApp</a></div>
+    </div>
+    <figure><img src="img/mannequins.webp" alt="Свадебные платья на манекенах в витрине" width="1600" height="1064" fetchpriority="high"><figcaption>Иллюстрация</figcaption></figure>
+    <div class="note"><h2>Примерка без спешки</h2><p>Салон открыт каждый день с 12:00 до 20:00 — выберите удобный день и время в форме ниже.</p></div>
+    <figure><img src="img/walk.webp" alt="Невеста в белом платье идёт по парку" loading="lazy" width="1600" height="1200"><figcaption>Иллюстрация</figcaption></figure>
+    <figure><img src="img/hanger.webp" alt="Кружевное свадебное платье на вешалке" loading="lazy" width="600" height="400"><figcaption>Иллюстрация</figcaption></figure>
+  </section>
+  <p class="hint">Листайте вбок</p>
+
+  <div class="wrap">
+    <section class="three" id="salon" aria-label="Что есть в «Атмосфере»">
+      <article><span class="n">Свадебные платья</span><h2>Салон</h2><p>Свадебные товары: платья и всё, что нужно к ним. Модели и размеры — на примерке.</p></article>
+      <article><span class="n">Повседневное</span><h2>Женская одежда</h2><p>Кроме свадебного, в «Атмосфере» есть женская одежда.</p></article>
+      <article><span class="n">Съёмка</span><h2>Фотостудия</h2><p>Своя фотостудия — для съёмки в платье или отдельно. Условия аренды уточните у администратора.</p></article>
+    </section>
+
+    <section class="fit" id="primerka" aria-labelledby="h-fit">
+      <div>
+        <h2 id="h-fit">Запись на примерку</h2>
+        <p>Мытная улица, 27, цокольный этаж, вход с торца.</p>
+        <p>Каждый день 12:00–20:00. <span class="now" data-open-now></span></p>
+        <p><a href="tel:+79197234397">+7 919 723-43-97</a><br><a href="tel:+79919226878">+7 991 922-68-78</a></p>
+        <p><a href="https://t.me/+79197234397" target="_blank" rel="noopener">Telegram</a>, <a href="https://vk.com/atmosferawed" target="_blank" rel="noopener">ВКонтакте</a>, <a href="mailto:atmosferawedding@yandex.ru">atmosferawedding@yandex.ru</a></p>
+        <p><a href="https://yandex.ru/maps/?pt=37.620203,55.715933&z=17&l=map" target="_blank" rel="noopener">Открыть на карте</a></p>
+        <p>5,0 из 5 в 2ГИС по 22 отзывам, ноябрь 2026. <a href="https://2gis.ru/moscow/firm/70000001074594985" target="_blank" rel="noopener">Читать</a></p>
+      </div>
+      <form data-lead data-biz="Атмосфера, Мытная 27" data-wa="79197234397" data-phone="+79197234397" novalidate>
+        <div class="f"><label for="what">Что примерить</label><select id="what" name="what" data-label="Цель"><option>Свадебное платье</option><option>Вечернее или повседневное</option><option>Хочу в фотостудию</option></select></div>
+        <div class="f"><label for="wd">Дата свадьбы</label><input id="wd" name="wedding" type="date" data-label="Дата свадьбы"></div>
+        <div class="f"><label for="d">Когда прийти</label><input id="d" name="visit" type="date" data-label="Визит"></div>
+        <div class="f"><label for="g">Сколько вас будет</label><select id="g" name="guests" data-label="Гостей на примерке"><option>Одна</option><option>Вдвоём</option><option>Трое и больше</option></select></div>
+        <div class="f"><label for="n">Имя</label><input id="n" name="name" autocomplete="name" required></div>
+        <div class="f"><label for="p">Телефон</label><input id="p" name="phone" type="tel" autocomplete="tel" required></div>
+        <button class="btn" type="submit">Записаться</button>
+      </form>
+    </section>
+  </div>
+</main>
+<footer><div class="wrap">
+  <div class="concept-note">Концепт сайта для портфолио, не официальный сайт «Атмосферы». Данные — из открытой карточки 2ГИС, ноябрь 2026. Фото иллюстративные — свои платья салон покажет при запуске.</div>
+  <details class="photo-credits" data-credits><summary>Фотографии — открытые лицензии</summary></details>
+</div></footer>
+<script src="../../assets/kit.js" defer></script>
+</body>
+</html>

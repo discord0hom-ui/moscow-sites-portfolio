@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Лицей — пекарня и кафе в Лялином переулке</title>
+<meta name="description" content="Пекарня и кафе «Лицей»: Лялин переулок, 8 стр. 2. Будни 8:00–21:00, выходные 9:00–22:00. 5,0 в 2ГИС по 1048 отзывам.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Лицей — пекарня и кафе">
+<meta property="og:description" content="Лялин переулок, 8 стр. 2. Будни 8:00–21:00, выходные 9:00–22:00.">
+<meta property="og:image" content="img/hero.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600;7..72,800&family=Golos+Text:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/kit.css">
+<style>
+:root{
+  --flour:#EEF0EC; --paper:#F8F9F6; --grid:#C9D6E2; --crust:#6B3F1F; --rye:#9A6232;
+  --ink:#24211D; --ink2:#55504A; --red:#C2362B; --line:#D6D2C8;
+  --kit-accent:var(--crust); --kit-on-accent:#fff; --kit-ink:var(--ink); --kit-line:var(--line); --kit-radius:4px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:400 17px/1.6 "Golos Text",system-ui,sans-serif;color:var(--ink);background:var(--flour)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:Literata,Georgia,serif;font-weight:800;line-height:1.05;margin:0}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+
+/* шапка */
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0}
+.logo{font:800 22px/1 Literata,serif;text-decoration:none;letter-spacing:.01em}
+.top nav{display:flex;gap:22px;font-size:15px}
+.top nav a{text-decoration:none;color:var(--ink2)}
+.top nav a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
+.top .call{font-weight:600;text-decoration:none;white-space:nowrap}
+@media (max-width:760px){.top nav{display:none}}
+
+/* первый экран: тетрадь в клетку с расписанием */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:0;margin-top:8px;border:1px solid var(--line);background:var(--paper)}
+.sheet{padding:clamp(24px,4vw,56px);background-color:var(--paper);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:26px 26px;background-position:-1px -1px;position:relative}
+.sheet::before{content:"";position:absolute;top:0;bottom:0;left:clamp(14px,2.6vw,38px);width:2px;background:rgba(194,54,43,.45)}
+.sheet>*{position:relative}
+.kicker{font-size:15px;color:var(--ink2);margin:0 0 10px;padding-left:clamp(10px,2vw,22px)}
+.hero h1{font-size:clamp(64px,11vw,148px);letter-spacing:-.02em;padding-left:clamp(10px,2vw,22px)}
+.lead{font-size:clamp(18px,2vw,21px);max-width:30ch;margin:16px 0 26px;padding-left:clamp(10px,2vw,22px)}
+.timetable{margin-left:clamp(10px,2vw,22px);background:var(--paper);border:2px solid var(--ink);max-width:440px}
+.timetable caption{caption-side:top;text-align:left;font:600 15px/1.3 "Golos Text";padding:10px 16px 0}
+.timetable table{border-collapse:collapse;width:100%}
+.timetable th,.timetable td{padding:12px 16px;border-top:1px solid var(--ink);text-align:left;font-variant-numeric:tabular-nums}
+.timetable tr:first-child th,.timetable tr:first-child td{border-top:0}
+.timetable th{font-weight:500;width:46%}
+.timetable td{font:600 22px/1 Literata,serif}
+.now{display:inline-block;margin:14px 0 0 clamp(10px,2vw,22px);font-weight:600;font-size:15px}
+.now.is-open{color:#2E6B3A}.now.is-closed{color:var(--red)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 0 clamp(10px,2vw,22px)}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 20px;border:2px solid var(--ink);background:var(--ink);color:var(--paper);font-weight:600;text-decoration:none;border-radius:2px}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn:hover{background:var(--crust);border-color:var(--crust);color:#fff}
+.hero figure{margin:0;position:relative;min-height:420px;border-left:1px solid var(--line)}
+.hero figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* оценка как в табеле */
+.grade{display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,4vw,60px);align-items:center;padding:clamp(56px,8vw,110px) 0}
+.five{position:relative;width:clamp(150px,20vw,230px);aspect-ratio:1;display:grid;place-items:center}
+.five span{font:600 clamp(120px,17vw,200px)/1 Caveat,cursive;color:var(--red);transform:rotate(-8deg)}
+.five svg{position:absolute;inset:0;width:100%;height:100%}
+.grade h2{font-size:clamp(30px,4.2vw,52px);max-width:16ch}
+.grade p{max-width:52ch;color:var(--ink2);margin:16px 0 0}
+.grade a{font-weight:600;color:var(--ink)}
+
+/* три фото — разной высоты, как на подносе */
+.tray{display:grid;grid-template-columns:1.2fr .8fr 1fr;gap:14px;align-items:end}
+.tray figure{margin:0}
+.tray img{width:100%;object-fit:cover;border:1px solid var(--line)}
+.tray .a img{aspect-ratio:4/3}.tray .b img{aspect-ratio:3/4}.tray .c img{aspect-ratio:1}
+.tray figcaption{font-size:14px;color:var(--ink2);padding-top:8px}
+
+/* как дойти + записка */
+.find{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);padding:clamp(56px,8vw,110px) 0}
+.find h2{font-size:clamp(30px,4vw,48px);margin-bottom:18px}
+.addr{font:600 clamp(22px,2.6vw,30px)/1.25 Literata,serif;margin:0 0 10px}
+.find dl{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;margin:22px 0}
+.find dt{color:var(--ink2)}.find dd{margin:0;font-weight:500}
+.map{border:1px solid var(--line);width:100%;height:260px;margin-top:8px;filter:saturate(.75)}
+.note{background:var(--paper);border:1px solid var(--line);padding:clamp(20px,3vw,36px);
+  background-image:linear-gradient(transparent 31px,var(--grid) 32px);background-size:100% 32px;line-height:32px}
+.note h2{line-height:1.1;margin-bottom:6px}
+.note p{margin:0 0 6px;color:var(--ink2)}
+.field{display:grid;gap:2px;margin-bottom:6px}
+.field label{font-size:14px;color:var(--ink2);line-height:1.4}
+.field input,.field textarea{font:inherit;line-height:1.4;padding:10px 12px;border:1px solid var(--ink);background:var(--paper);border-radius:2px;width:100%}
+.field textarea{min-height:96px;resize:vertical}
+.note .btn{margin-top:8px}
+
+footer{border-top:1px solid var(--line);padding:28px 0 40px;font-size:15px;color:var(--ink2)}
+footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr}
+  .hero figure{min-height:280px;border-left:0;border-top:1px solid var(--line)}
+  .grade{grid-template-columns:1fr;justify-items:start}
+  .tray{grid-template-columns:1fr 1fr}.tray .a{grid-column:1/-1}
+  .find{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body data-hours='{"1":["08:00","21:00"],"2":["08:00","21:00"],"3":["08:00","21:00"],"4":["08:00","21:00"],"5":["08:00","21:00"],"6":["09:00","22:00"],"0":["09:00","22:00"]}'>
+<a class="skip-link" href="#main">К содержанию</a>
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="#">Лицей</a>
+    <nav aria-label="Разделы"><a href="#otzyvy">Отзывы</a><a href="#kak-doyti">Как дойти</a><a href="#napisat">Написать</a></nav>
+    <a class="call" href="tel:+79151386840">+7 915 138-68-40</a>
+  </header>
+</div>
+
+<main id="main">
+  <div class="wrap">
+    <section class="hero" aria-labelledby="h1">
+      <div class="sheet">
+        <p class="kicker">Пекарня и кафе у Курской</p>
+        <h1 id="h1">Лицей</h1>
+        <p class="lead">Хлеб, выпечка и кофе в Лялином переулке. Можно взять с собой, можно остаться за столиком.</p>
+        <div class="timetable">
+          <table>
+            <caption>Расписание</caption>
+            <tr><th scope="row">Понедельник — пятница</th><td>8:00–21:00</td></tr>
+            <tr><th scope="row">Суббота и воскресенье</th><td>9:00–22:00</td></tr>
+          </table>
+        </div>
+        <span class="now" data-open-now></span>
+        <div class="btns">
+          <a class="btn" href="tel:+79151386840">Позвонить</a>
+          <a class="btn ghost" href="https://wa.me/79151386840" target="_blank" rel="noopener">Написать в WhatsApp</a>
+        </div>
+      </div>
+      <figure><img src="img/hero.webp" alt="Круглый хлеб с надрезами в виде колосьев" width="1350" height="1072" fetchpriority="high"></figure>
+    </section>
+
+    <section class="grade" id="otzyvy" aria-labelledby="h-grade">
+      <div class="five" aria-hidden="true">
+        <svg viewBox="0 0 200 200" fill="none"><path d="M100 14c52 2 88 34 86 84-2 54-46 90-92 88C46 184 12 148 16 98 20 48 62 16 112 18" stroke="#C2362B" stroke-width="5" stroke-linecap="round"/></svg>
+        <span>5</span>
+      </div>
+      <div>
+        <h2 id="h-grade">Пятёрка в 2ГИС по 1048 отзывам</h2>
+        <p>Средняя оценка 5,0 из 5 — по отзывам гостей в 2ГИС на ноябрь 2026. Почитать их можно в <a href="https://2gis.ru/moscow/firm/70000001088737935" target="_blank" rel="noopener">карточке «Лицея»</a>.</p>
+      </div>
+    </section>
+
+    <section class="tray" aria-label="Фотографии">
+      <figure class="a"><img src="img/oven.webp" alt="Пекарь достаёт хлеб из печи" loading="lazy" width="1024" height="681"><figcaption>Иллюстрация: печь и хлеб</figcaption></figure>
+      <figure class="b"><img src="img/croissant.webp" alt="Круассаны на подносе" loading="lazy" width="1200" height="1600"><figcaption>Иллюстрация: круассаны</figcaption></figure>
+      <figure class="c"><img src="img/hero.webp" alt="" loading="lazy" width="1350" height="1072" style="object-position:30% 50%"><figcaption>Иллюстрация: корка</figcaption></figure>
+    </section>
+
+    <section class="find" id="kak-doyti" aria-labelledby="h-find">
+      <div>
+        <h2 id="h-find">Как дойти</h2>
+        <p class="addr">Лялин переулок, 8 стр. 2, первый этаж</p>
+        <dl>
+          <dt>Телефоны</dt><dd><a href="tel:+79151386840">+7 915 138-68-40</a><br><a href="tel:+79160795804">+7 916 079-58-04</a></dd>
+          <dt>WhatsApp</dt><dd><a href="https://wa.me/79151386840" target="_blank" rel="noopener">+7 915 138-68-40</a></dd>
+        </dl>
+        <div class="btns" style="margin-left:0">
+          <a class="btn ghost" href="https://yandex.ru/maps/?pt=37.651514,55.760191&z=17&l=map" target="_blank" rel="noopener">Яндекс Карты</a>
+          <a class="btn ghost" href="https://2gis.ru/moscow/firm/70000001088737935" target="_blank" rel="noopener">2ГИС</a>
+        </div>
+        <iframe class="map" title="Карта: Лялин переулок, 8 стр. 2" loading="lazy"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=37.6465%2C55.7582%2C37.6565%2C55.7622&amp;layer=mapnik&amp;marker=55.760191%2C37.651514"></iframe>
+      </div>
+      <form class="note" id="napisat" data-lead data-biz="Лицей" data-wa="79151386840" data-phone="+79151386840" novalidate>
+        <h2>Записка в пекарню</h2>
+        <p>Спросить про хлеб, столик или заказ — администратор ответит в WhatsApp.</p>
+        <div class="field"><label for="n">Как к вам обращаться</label><input id="n" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="p">Телефон</label><input id="p" name="phone" type="tel" autocomplete="tel" inputmode="tel" required></div>
+        <div class="field"><label for="m">Вопрос</label><textarea id="m" name="msg" data-label="Вопрос"></textarea></div>
+        <button class="btn" type="submit">Подготовить сообщение</button>
+      </form>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap row">
+    <div>Лицей, Лялин переулок, 8 стр. 2<br><a href="tel:+79151386840">+7 915 138-68-40</a></div>
+    <div class="concept-note">Концепт сайта для портфолио, не официальный сайт «Лицея». Данные — из открытой карточки 2ГИС, ноябрь 2026.</div>
+  </div>
+  <div class="wrap"><details class="photo-credits" data-credits><summary>Фотографии — открытые лицензии</summary></details></div>
+</footer>
+<script src="../../assets/kit.js" defer></script>
+</body>
+</html>

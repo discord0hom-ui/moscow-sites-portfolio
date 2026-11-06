@@ -1,0 +1,23 @@
+{
+ "hero": {
+  "title": "Sourdough bread cut with lame, after baking",
+  "author": "Joy",
+  "license": "BY",
+  "license_url": "https://creativecommons.org/licenses/by/2.0/",
+  "source": "https://commons.wikimedia.org/w/index.php?curid=147656253"
+ },
+ "croissant": {
+  "title": "Croissants au beurre (18953292873)",
+  "author": "Herry Wibisono (herryway)",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en/",
+  "source": "https://commons.wikimedia.org/w/index.php?curid=45733817"
+ },
+ "oven": {
+  "title": "Free fresh artisan bread oven",
+  "author": null,
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source": "https://www.rawpixel.com/image/5904163/photo-image-public-domain-person-food"
+ }
+}

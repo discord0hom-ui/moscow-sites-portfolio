@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Меха Екатерина — чистка, хранение и ремонт меха на Большой Дмитровке</title>
+<meta name="description" content="«Меха Екатерина»: Большая Дмитровка, 11 стр. 7. Химчистка, хранение меха, ателье меха и кожи, ремонт одежды. Каждый день 8:30–20:00. 5,0 в 2ГИС по 34 отзывам.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Меха Екатерина — год вашей шубы">
+<meta property="og:image" content="img/coat.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%233B2C24'/%3E%3Ctext x='16' y='22' font-size='16' text-anchor='middle' fill='%23B89B5E' font-family='serif'%3EЕ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/kit.css">
+<style>
+:root{
+  --frost:#EEF2F5; --sable:#3B2C24; --mink:#6B4F3A; --gold:#B89B5E; --satin:#5E1F2B; --ink:#231C18; --ink2:#5F5650; --line:#D4CFC9;
+  --spring:#E3EBDD; --summer:#F1E6CF; --autumn:#EBD9CC; --winter:#DCE6EE;
+  --kit-accent:var(--satin); --kit-on-accent:#fff; --kit-ink:var(--ink); --kit-line:var(--line); --kit-radius:0;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:400 17px/1.7 Raleway,system-ui,sans-serif;font-variant-numeric:lining-nums;color:var(--ink);background:var(--frost)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:Prata,Georgia,serif;font-weight:400;margin:0;line-height:1.08}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+
+.hero{background:var(--sable);color:#F3EEE8;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,4vw,64px);align-items:center;min-height:min(88vh,780px);padding:clamp(24px,4vw,48px) 0}
+.brand{position:absolute;top:22px;left:max(16px,calc((100% - 1180px)/2));right:max(16px,calc((100% - 1180px)/2));display:flex;justify-content:space-between;font-size:15px}
+.brand b{font:400 20px/1 Prata;color:var(--gold)}
+.brand a{text-decoration:none;font-weight:600}
+.hero h1{font-size:clamp(42px,5.6vw,78px)}
+.hero p{font-size:clamp(17px,1.6vw,20px);color:#D8CCC0;max-width:40ch;margin:20px 0 28px}
+.hero figure{margin:0;align-self:end;justify-self:center;max-width:420px}
+.hero figure img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 20%}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;min-height:52px;padding:0 26px;background:var(--gold);color:var(--sable);font-weight:600;text-decoration:none;border:1.5px solid var(--gold)}
+.btn.ghost{background:transparent;color:#F3EEE8}
+.btn:hover{background:#CDB57E;color:var(--sable)}
+
+/* кольцо года — навигация по главам */
+.ring{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;background:var(--frost)}
+.ring a{padding:16px 10px;text-align:center;text-decoration:none;font-weight:600;font-size:15px;border-left:1px solid var(--line)}
+.ring a:first-child{border-left:0}
+.ring a span{display:block;font:400 13px Raleway;color:var(--ink2)}
+.ring a[aria-current="true"]{background:var(--sable);color:var(--gold)}
+.ring a[aria-current="true"] span{color:#D8CCC0}
+
+.ch{padding:clamp(56px,8vw,110px) 0}
+.ch .wrap{display:grid;grid-template-columns:200px 1fr 1fr;gap:clamp(20px,4vw,56px);align-items:start}
+.ch .when{font:400 clamp(44px,5vw,64px)/1 Prata;color:var(--mink)}
+.ch .when small{display:block;font:500 14px Raleway;color:var(--ink2);margin-top:10px}
+.ch h2{font-size:clamp(28px,3.2vw,40px);margin-bottom:14px}
+.ch p{margin:0 0 12px;max-width:44ch}
+.ch img{width:100%;aspect-ratio:4/3;object-fit:cover}
+#vesna{background:var(--spring)}#leto{background:var(--summer)}#osen{background:var(--autumn)}#zima{background:var(--winter)}
+
+.svc{padding:clamp(56px,8vw,100px) 0}
+.svc h2{font-size:clamp(32px,4vw,50px);margin-bottom:26px}
+.svc dl{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0;border-top:1px solid var(--ink)}
+.svc dt{font:400 22px/1.2 Prata;padding:20px 20px 6px 0}
+.svc dd{margin:0;padding:0 20px 20px 0;color:var(--ink2);font-size:16px}
+.svc .cell{border-right:1px solid var(--line);padding-left:20px}
+.svc .cell:first-child{padding-left:0}
+.svc .cell:last-child{border-right:0}
+
+.visit{background:var(--sable);color:#F3EEE8;padding:clamp(56px,8vw,100px) 0}
+.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,64px)}
+.visit h2{font-size:clamp(32px,4vw,50px);margin-bottom:18px}
+.visit p{margin:0 0 10px;color:#D8CCC0}
+.visit a{color:#F3EEE8}
+.now.is-open{color:#A8D5A2}.now.is-closed{color:#F0A99B}
+form{display:grid;gap:12px;background:#4A3A30;padding:clamp(20px,3vw,32px)}
+label{font-size:14px;font-weight:600;color:#D8CCC0}
+form input,form select{font:inherit;width:100%;padding:12px 14px;border:1px solid #6E5A4C;background:#2E231D;color:#F3EEE8;border-radius:0;margin-top:4px}
+form .btn{cursor:pointer;justify-self:start;font:inherit;font-weight:600}
+.lead-btn--ghost{color:#F3EEE8}
+footer{padding:24px 0 44px;font-size:14px;color:var(--ink2)}
+@media (max-width:900px){
+  .hero .wrap,.visit .wrap{grid-template-columns:1fr}.hero .wrap{padding-top:80px}
+  .ch .wrap{grid-template-columns:1fr}
+  .svc dl{grid-template-columns:1fr 1fr}.svc .cell{border-right:0;padding-left:0}
+  .ring a span{display:none}
+}
+</style>
+</head>
+<body data-hours='{"0":["08:30","20:00"],"1":["08:30","20:00"],"2":["08:30","20:00"],"3":["08:30","20:00"],"4":["08:30","20:00"],"5":["08:30","20:00"],"6":["08:30","20:00"]}'>
+<a class="skip-link" href="#main">К содержанию</a>
+<header class="hero">
+  <div class="brand"><b>Меха Екатерина</b><a href="tel:+74951590008">+7 495 159-00-08</a></div>
+  <div class="wrap">
+    <div>
+      <h1>Год вашей шубы — на Большой Дмитровке</h1>
+      <p>Почистить весной, сохранить летом, подогнать осенью, носить зимой. Химчистка, хранение меха, ателье меха и кожи — в одном месте в центре.</p>
+      <div class="btns">
+        <a class="btn" href="#zayavka">Оставить заявку</a>
+        <a class="btn ghost" href="https://t.me/mexaekaterina" target="_blank" rel="noopener">Telegram</a>
+      </div>
+    </div>
+    <figure><img src="img/coat.webp" alt="Чёрная меховая шуба на манекене" width="1152" height="1600" fetchpriority="high"></figure>
+  </div>
+</header>
+
+<nav class="ring" aria-label="Сезоны">
+  <a href="#vesna" data-m="2,3,4">Весна<span>чистка</span></a>
+  <a href="#leto" data-m="5,6,7">Лето<span>хранение</span></a>
+  <a href="#osen" data-m="8,9,10">Осень<span>ремонт и подгонка</span></a>
+  <a href="#zima" data-m="11,0,1">Зима<span>носить</span></a>
+</nav>
+
+<main id="main">
+  <section class="ch" id="vesna" aria-labelledby="h-v"><div class="wrap">
+    <div class="when">Весна<small>март — май</small></div>
+    <div><h2 id="h-v">Сдать в чистку</h2><p>За зиму мех собирает пыль, реагенты и запахи города. Прежде чем убирать шубу до осени, её стоит почистить — в «Меха Екатерина» есть химчистка одежды и текстиля.</p><p>Состояние изделия и стоимость оценят при приёмке.</p></div>
+    <img src="img/street.webp" alt="Женщина в меховой шубе на зимней улице" loading="lazy" width="680" height="1024" style="aspect-ratio:4/5">
+  </div></section>
+
+  <section class="ch" id="leto" aria-labelledby="h-l"><div class="wrap">
+    <div class="when">Лето<small>июнь — август</small></div>
+    <div><h2 id="h-l">Оставить на хранение</h2><p>В квартире летом жарко и сухо, а в шкафу мех мнётся. В карточке салона указана услуга хранения меха — шуба переждёт лето там.</p><p>Условия и сроки хранения расскажут по телефону.</p></div>
+    <div></div>
+  </div></section>
+
+  <section class="ch" id="osen" aria-labelledby="h-o"><div class="wrap">
+    <div class="when">Осень<small>сентябрь — ноябрь</small></div>
+    <div><h2 id="h-o">Подогнать и починить</h2><p>Ателье меха и кожи и ремонт одежды: укоротить рукава, заменить подклад, застёжки, восстановить швы — до первых морозов.</p></div>
+    <img src="img/hat.webp" alt="Меховая шапка на манекене" loading="lazy" width="1600" height="1200">
+  </div></section>
+
+  <section class="ch" id="zima" aria-labelledby="h-z"><div class="wrap">
+    <div class="when">Зима<small>декабрь — февраль</small></div>
+    <div><h2 id="h-z">Носить</h2><p>А если зимой что-то случилось — оторвалась пуговица или разошёлся шов, — салон открыт каждый день с 8:30 до 20:00.</p></div>
+    <div></div>
+  </div></section>
+
+  <section class="svc" aria-labelledby="h-s"><div class="wrap">
+    <h2 id="h-s">Услуги</h2>
+    <dl>
+      <div class="cell"><dt>Химчистка</dt><dd>одежды и текстиля</dd></div>
+      <div class="cell"><dt>Хранение</dt><dd>меховых изделий</dd></div>
+      <div class="cell"><dt>Ателье</dt><dd>меха и кожи</dd></div>
+      <div class="cell"><dt>Ремонт</dt><dd>одежды</dd></div>
+    </dl>
+    <p style="color:var(--ink2);margin-top:22px">5,0 из 5 в 2ГИС по 34 отзывам, ноябрь 2026. <a href="https://2gis.ru/moscow/firm/70000001075895067" target="_blank" rel="noopener">Читать отзывы</a></p>
+  </div></section>
+
+  <section class="visit" id="zayavka" aria-labelledby="h-c"><div class="wrap">
+    <div>
+      <h2 id="h-c">Приходите или спросите заранее</h2>
+      <p>Большая Дмитровка, 11 стр. 7</p>
+      <p>Каждый день 8:30–20:00. <span class="now" data-open-now></span></p>
+      <p><a href="tel:+74951590008">+7 495 159-00-08</a><br><a href="mailto:client@mehovoy.ru">client@mehovoy.ru</a></p>
+      <p><a href="https://t.me/mexaekaterina" target="_blank" rel="noopener">Telegram</a>, <a href="https://vk.com/mehaekaterina" target="_blank" rel="noopener">ВКонтакте</a>, <a href="https://youtube.com/@ekaterinamexa" target="_blank" rel="noopener">YouTube</a></p>
+      <p><a href="https://yandex.ru/maps/?pt=37.613262,55.761691&z=17&l=map" target="_blank" rel="noopener">Открыть на карте</a></p>
+    </div>
+    <form data-lead data-biz="Меха Екатерина" data-phone="+74951590008" novalidate>
+      <div><label for="what">Изделие</label><select id="what" name="what" data-label="Изделие"><option>Шуба</option><option>Дублёнка</option><option>Кожаная куртка</option><option>Шапка</option><option>Другое</option></select></div>
+      <div><label for="svc">Что нужно</label><select id="svc" name="svc" data-label="Услуга"><option>Химчистка</option><option>Хранение</option><option>Ремонт или подгонка</option><option>Пока не знаю</option></select></div>
+      <div><label for="n">Имя</label><input id="n" name="name" autocomplete="name" required></div>
+      <div><label for="p">Телефон</label><input id="p" name="phone" type="tel" autocomplete="tel" required></div>
+      <button class="btn" type="submit">Подготовить вопрос</button>
+    </form>
+  </div></section>
+</main>
+<footer><div class="wrap">
+  <div class="concept-note">Концепт сайта для портфолио, не официальный сайт «Меха Екатерина». Данные — из открытой карточки 2ГИС, ноябрь 2026. Фото иллюстративные.</div>
+  <details class="photo-credits" data-credits><summary>Фотографии — открытые лицензии</summary></details>
+</div></footer>
+<script src="../../assets/kit.js" defer></script>
+<script>
+// подсветить текущий сезон
+(function () {
+  var m = new Date().getMonth();
+  document.querySelectorAll('.ring a').forEach(function (a) {
+    if (a.dataset.m.split(',').map(Number).indexOf(m) >= 0) a.setAttribute('aria-current', 'true');
+  });
+})();
+</script>
+</body>
+</html>

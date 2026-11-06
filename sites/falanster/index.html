@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Фаланстер — книжный магазин на Тверской</title>
+<meta name="description" content="Книжный магазин «Фаланстер»: Тверская улица, 17, цокольный этаж. Каждый день 11:00–20:00. 5,0 в 2ГИС по 99 отзывам. Спросить книгу по телефону или почте.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Фаланстер — книжный на Тверской">
+<meta property="og:image" content="img/shelves.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='5' y='4' width='6' height='24' fill='%23234B3A'/%3E%3Crect x='13' y='8' width='5' height='20' fill='%237A2430'/%3E%3Crect x='20' y='6' width='7' height='22' fill='%23C49A3A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/kit.css">
+<style>
+:root{
+  --news:#E9E7E1; --page:#F6F5F1; --green:#234B3A; --ox:#7A2430; --ochre:#C49A3A; --slate:#4A5866; --ink:#1D1B18; --ink2:#55524C; --line:#CFCBC1;
+  --kit-accent:var(--green); --kit-on-accent:#fff; --kit-ink:var(--ink); --kit-line:var(--line); --kit-radius:0;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:400 18px/1.65 "PT Serif",Georgia,serif;color:var(--ink);background:var(--news)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:"Old Standard TT",serif;font-weight:700;margin:0;line-height:1.05}
+.wrap{width:min(1200px,100% - 32px);margin-inline:auto}
+
+/* полка: корешки — это и заголовок, и навигация */
+.shelf{display:flex;align-items:flex-end;gap:6px;height:min(72vh,600px);padding-top:28px;border-bottom:14px solid #3B2F25;overflow:hidden}
+.spine{flex:0 0 auto;writing-mode:vertical-rl;transform:rotate(180deg);display:flex;align-items:center;justify-content:space-between;
+  padding:18px 0;text-decoration:none;color:#F3EFE6;font:700 clamp(16px,1.6vw,20px)/1 "Old Standard TT",serif;border-radius:3px 3px 0 0;transition:transform .2s}
+.spine small{font:400 13px "PT Serif";opacity:.8}
+.spine:hover,.spine:focus-visible{transform:rotate(180deg) translateY(10px)}
+.s-title{width:clamp(120px,15vw,190px);height:100%;background:var(--green);font-size:clamp(46px,6.4vw,92px);padding:28px 0}
+.s-title small{font-size:15px}
+.s1{width:56px;height:78%;background:var(--ox)}
+.s2{width:44px;height:64%;background:var(--ochre);color:var(--ink)}
+.s3{width:70px;height:86%;background:var(--slate)}
+.s4{width:38px;height:58%;background:#8C7B63}
+.s5{width:60px;height:72%;background:#2E3B4E}
+.s6{width:48px;height:90%;background:#5E6B3A}
+.s7{width:34px;height:52%;background:var(--ox)}
+.s8{width:64px;height:80%;background:#B9B2A2;color:var(--ink)}
+.lean{transform:rotate(180deg) skewX(-4deg)}
+.under{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(20px,4vw,60px);padding:clamp(24px,4vw,48px) 0 clamp(48px,7vw,90px);align-items:start}
+.under h1{font-size:clamp(28px,3.2vw,42px);font-weight:400;max-width:26ch}
+.under p{margin:14px 0 0;color:var(--ink2);max-width:52ch}
+.card{background:var(--page);border:1px solid var(--line);padding:22px}
+.card dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:0}
+.card dt{color:var(--ink2)}.card dd{margin:0}
+.now.is-open{color:var(--green);font-weight:700}.now.is-closed{color:var(--ox);font-weight:700}
+
+.sec{padding:clamp(48px,7vw,90px) 0;border-top:1px solid var(--line)}
+.sec h2{font-size:clamp(34px,4.4vw,58px);margin-bottom:20px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,60px);align-items:start}
+.sec p{margin:0 0 12px;max-width:56ch}
+.photo img{width:100%;aspect-ratio:4/3;object-fit:cover;filter:sepia(.15)}
+.photo figcaption{font-size:14px;color:var(--ink2);margin-top:6px}
+.rate{font:700 clamp(88px,11vw,150px)/.85 "Old Standard TT";color:var(--green)}
+form{background:var(--page);border:1px solid var(--line);padding:clamp(20px,3vw,32px);display:grid;gap:12px}
+label{font-weight:700;font-size:15px;display:block;margin-bottom:4px}
+input,textarea{width:100%;font:inherit;padding:11px 13px;border:1px solid #A9A397;background:#fff;border-radius:0}
+textarea{min-height:90px}
+.btn{display:inline-flex;align-items:center;min-height:50px;padding:0 22px;background:var(--green);color:#fff;border:0;font:700 17px "PT Serif";cursor:pointer;text-decoration:none;justify-self:start}
+.btn:hover{background:#163428}
+footer{border-top:1px solid var(--line);padding:24px 0 44px;font-size:14px;color:var(--ink2)}
+@media (max-width:860px){.under,.two{grid-template-columns:1fr}.shelf{height:420px}.s5,.s6,.s7,.s8,.x{display:none}}
+</style>
+</head>
+<body data-hours='{"0":["11:00","20:00"],"1":["11:00","20:00"],"2":["11:00","20:00"],"3":["11:00","20:00"],"4":["11:00","20:00"],"5":["11:00","20:00"],"6":["11:00","20:00"]}'>
+<a class="skip-link" href="#main">К содержанию</a>
+<div class="wrap">
+  <nav class="shelf" aria-label="Разделы сайта">
+    <a class="spine s-title" href="#main">Фаланстер<small>книжный магазин</small></a>
+    <a class="spine s1" href="#doroga">Как найти<small>Тверская, 17</small></a>
+    <a class="spine s2" href="#kniga">Спросить книгу</a>
+    <a class="spine s3" href="#otzyvy">Отзывы<small>5,0</small></a>
+    <a class="spine s4 lean" href="#chasy">Часы</a>
+    <span class="spine s5" aria-hidden="true"></span>
+    <span class="spine s6" aria-hidden="true"></span>
+    <span class="spine s7" aria-hidden="true"></span>
+    <span class="spine s8" aria-hidden="true"></span>
+    <span class="spine x" style="width:52px;height:70%;background:#234B3A" aria-hidden="true"></span>
+    <span class="spine x" style="width:40px;height:62%;background:#C49A3A" aria-hidden="true"></span>
+    <span class="spine x" style="width:66px;height:88%;background:#4A5866" aria-hidden="true"></span>
+    <span class="spine x" style="width:46px;height:76%;background:#7A2430" aria-hidden="true"></span>
+    <span class="spine x" style="width:58px;height:66%;background:#8C7B63" aria-hidden="true"></span>
+    <span class="spine x" style="width:36px;height:82%;background:#2E3B4E" aria-hidden="true"></span>
+    <span class="spine x" style="width:62px;height:92%;background:#5E6B3A" aria-hidden="true"></span>
+    <span class="spine x" style="width:44px;height:60%;background:#B9B2A2" aria-hidden="true"></span>
+    <span class="spine x" style="width:54px;height:84%;background:#7A2430" aria-hidden="true"></span>
+    <span class="spine x" style="width:38px;height:70%;background:#234B3A" aria-hidden="true"></span>
+    <span class="spine x" style="width:60px;height:78%;background:#C49A3A" aria-hidden="true"></span>
+    <span class="spine x" style="width:42px;height:64%;background:#4A5866" aria-hidden="true"></span>
+    <span class="spine x" style="width:30px;height:90%;background:#3B2F25" aria-hidden="true"></span>
+  </nav>
+</div>
+<main id="main" class="wrap">
+  <section class="under" aria-labelledby="h1">
+    <div>
+      <h1 id="h1">Книжный магазин в цокольном этаже на Тверской улице</h1>
+      <p>Спуститесь с Тверской — и окажетесь среди полок. Ищете конкретную книгу — спросите заранее по телефону или почте, чтобы приехать наверняка.</p>
+    </div>
+    <div class="card" id="chasy">
+      <dl>
+        <dt>Адрес</dt><dd>Тверская улица, 17, цокольный этаж</dd>
+        <dt>Часы</dt><dd>каждый день 11:00–20:00</dd>
+        <dt>Сейчас</dt><dd class="now" data-open-now>—</dd>
+        <dt>Телефон</dt><dd><a href="tel:+74957495721">+7 495 749-57-21</a></dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="sec two" id="doroga" aria-labelledby="h-way">
+    <div>
+      <h2 id="h-way">Как найти</h2>
+      <p>Тверская улица, дом 17. Магазин в цокольном этаже — ищите вход и ступеньки вниз.</p>
+      <p>Ближайшие станции — «Пушкинская», «Тверская» и «Чеховская».</p>
+      <p><a href="https://yandex.ru/maps/?pt=37.607103,55.763088&z=18&l=map" target="_blank" rel="noopener">Открыть на Яндекс Картах</a></p>
+    </div>
+    <figure class="photo"><img src="img/shelves.webp" alt="Тесные книжные полки до потолка" loading="lazy" width="1600" height="1205"><figcaption>Иллюстрация: книжный магазин. Фото не из «Фаланстера».</figcaption></figure>
+  </section>
+
+  <section class="sec two" id="kniga" aria-labelledby="h-book">
+    <div>
+      <h2 id="h-book">Спросить книгу</h2>
+      <p>Напишите автора и название — продавцы ответят, есть ли она в магазине.</p>
+      <p><a href="tel:+74957495721">+7 495 749-57-21</a><br><a href="tel:+74956298821">+7 495 629-88-21</a></p>
+      <p><a href="mailto:shop@falanster.ru">shop@falanster.ru</a><br><a href="https://t.me/falanster_books" target="_blank" rel="noopener">Telegram</a>, <a href="https://vk.com/falanster_books" target="_blank" rel="noopener">ВКонтакте</a></p>
+    </div>
+    <form data-lead data-biz="Фаланстер" data-mail="shop@falanster.ru" data-phone="+74957495721" novalidate>
+      <div><label for="b">Книга</label><textarea id="b" name="book" data-label="Книга" placeholder="Автор, название, издательство" required></textarea></div>
+      <div><label for="n">Имя</label><input id="n" name="name" autocomplete="name" required></div>
+      <div><label for="c">Телефон или почта для ответа</label><input id="c" name="contact" data-label="Контакт" required></div>
+      <button class="btn" type="submit">Подготовить запрос</button>
+    </form>
+  </section>
+
+  <section class="sec two" id="otzyvy" aria-labelledby="h-r">
+    <div><span class="rate">5,0</span></div>
+    <div>
+      <h2 id="h-r">Оценка читателей</h2>
+      <p>Средняя оценка в 2ГИС по 99 отзывам, ноябрь 2026.</p>
+      <p><a href="https://2gis.ru/moscow/firm/4504127908372991" target="_blank" rel="noopener">Читать отзывы в 2ГИС</a></p>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap">
+  <div class="concept-note">Концепт сайта для портфолио, не официальный сайт «Фаланстера». Данные — из открытой карточки 2ГИС, ноябрь 2026.</div>
+  <details class="photo-credits" data-credits><summary>Фотографии — открытые лицензии</summary></details>
+</div></footer>
+<script src="../../assets/kit.js" defer></script>
+</body>
+</html>

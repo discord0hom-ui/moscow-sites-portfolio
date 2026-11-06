@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Автобутик — тонировка и детейлинг у Бауманской</title>
+<meta name="description" content="Автобутик: тонирование и детейлинг, Спартаковский переулок, 24 стр. 2. Каждый день 10:00–23:00. 5,0 в 2ГИС по 45 отзывам.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Автобутик — тонировка и детейлинг">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230E1620'/%3E%3Cpath d='M6 20l5-8h10l5 8z' fill='%23F5C518'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/kit.css">
+<style>
+:root{
+  --lacquer:#0E1620; --graphite:#1C232C; --graphite2:#2A323D; --yellow:#F5C518; --chrome:#C9CED6; --white:#F3F5F7; --mute:#97A1AD; --red:#FF6B57;
+  --kit-accent:var(--yellow); --kit-on-accent:#0E1620; --kit-ink:var(--white); --kit-line:#3A4450; --kit-radius:8px; --kit-focus:var(--yellow);
+}
+*{box-sizing:border-box}
+body{margin:0;font:400 17px/1.6 "Inter Tight",system-ui,sans-serif;color:var(--white);background:var(--lacquer)}
+a{color:inherit}
+h1,h2,h3{font-family:"Russo One",sans-serif;font-weight:400;margin:0;line-height:1.02}
+.wrap{width:min(1220px,100% - 32px);margin-inline:auto}
+.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px;border-bottom:1px solid var(--graphite2)}
+.top b{font:400 20px/1 "Russo One"}
+.top a{color:var(--yellow);font-weight:600;text-decoration:none}
+
+/* первый экран: стекло, которое затемняется ползунком */
+.hero{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(24px,4vw,64px);align-items:center;padding:clamp(36px,6vw,90px) 0}
+.hero h1{font-size:clamp(40px,5.8vw,80px);letter-spacing:-.01em}
+.hero p{color:var(--chrome);font-size:clamp(17px,1.6vw,20px);margin:18px 0 26px;max-width:40ch}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;min-height:54px;padding:0 24px;border-radius:8px;background:var(--yellow);color:var(--lacquer);font-weight:600;text-decoration:none;border:2px solid var(--yellow)}
+.btn.ghost{background:transparent;color:var(--white);border-color:var(--graphite2)}
+.btn:hover{filter:brightness(1.08)}
+.tint{background:var(--graphite);border-radius:20px;padding:clamp(18px,2.6vw,30px)}
+.car{width:100%;height:auto;display:block}
+.glass{transition:fill-opacity .15s}
+.ctrl{display:grid;grid-template-columns:1fr auto;gap:8px 16px;align-items:center;margin-top:14px}
+.ctrl label{font-weight:600}
+.ctrl output{font:400 30px/1 "Russo One";color:var(--yellow);font-variant-numeric:tabular-nums}
+.ctrl input{grid-column:1/-1;width:100%;accent-color:var(--yellow);height:28px}
+.law{grid-column:1/-1;font-size:15px;color:var(--mute);margin:4px 0 0;min-height:3em}
+.law.bad{color:var(--red)}
+
+/* процесс */
+.steps{padding:clamp(48px,7vw,96px) 0;border-top:1px solid var(--graphite2)}
+.steps h2{font-size:clamp(30px,4vw,52px);margin-bottom:32px}
+.steps ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s}
+.steps li{padding:22px 22px 26px 0;border-top:3px solid var(--graphite2);position:relative;counter-increment:s}
+.steps li::before{content:counter(s);position:absolute;top:-17px;left:0;width:30px;height:30px;border-radius:50%;background:var(--yellow);color:var(--lacquer);display:grid;place-items:center;font:400 15px "Russo One"}
+.steps li:first-child{border-top-color:var(--yellow)}
+.steps h3{font-size:22px;margin:14px 0 8px}
+.steps p{margin:0;color:var(--chrome);max-width:28ch}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2vw,24px);padding-bottom:clamp(48px,7vw,96px)}
+.two article{background:var(--graphite);border-radius:20px;padding:clamp(22px,3vw,40px)}
+.two h2{font-size:clamp(26px,3vw,38px);margin-bottom:12px}
+.two p{color:var(--chrome);margin:0 0 10px}
+.rate strong{font:400 clamp(64px,8vw,110px)/.9 "Russo One";color:var(--yellow)}
+
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);padding:clamp(40px,6vw,80px) 0;border-top:1px solid var(--graphite2)}
+.contact h2{font-size:clamp(30px,3.6vw,46px);margin-bottom:16px}
+.contact p{margin:0 0 8px;color:var(--chrome)}
+.contact a{color:var(--white)}
+form{display:grid;grid-template-columns:1fr 1fr;gap:12px;background:var(--graphite);padding:clamp(20px,3vw,32px);border-radius:20px}
+.f{display:grid;gap:6px}.f.w{grid-column:1/-1}
+label{font-size:14px;font-weight:600;color:var(--chrome)}
+form input,form select{font:inherit;padding:12px 14px;border:1px solid #3A4450;border-radius:8px;background:var(--lacquer);color:var(--white)}
+form .btn{grid-column:1/-1;justify-self:start;cursor:pointer;font:inherit;font-weight:600}
+.lead-btn--ghost{color:var(--white)}
+footer{border-top:1px solid var(--graphite2);padding:24px 0 44px;font-size:14px;color:var(--mute)}
+@media (max-width:900px){.hero,.two,.contact{grid-template-columns:1fr}.steps ol{grid-template-columns:1fr 1fr;row-gap:30px}}
+@media (max-width:520px){.steps ol,form{grid-template-columns:1fr}}
+</style>
+</head>
+<body data-hours='{"0":["10:00","23:00"],"1":["10:00","23:00"],"2":["10:00","23:00"],"3":["10:00","23:00"],"4":["10:00","23:00"],"5":["10:00","23:00"],"6":["10:00","23:00"]}'>
+<a class="skip-link" href="#main">К содержанию</a>
+<div class="wrap"><header class="top"><b>Автобутик</b><a href="tel:+79256464291">+7 925 646-42-91</a></header></div>
+<main id="main" class="wrap">
+  <section class="hero" aria-labelledby="h1">
+    <div>
+      <h1 id="h1">Тонировка и детейлинг у Бауманской</h1>
+      <p>Спартаковский переулок, 24 стр. 2. Каждый день с 10:00 до 23:00 — можно заехать после работы.</p>
+      <div class="btns">
+        <a class="btn" href="#zapis">Записаться</a>
+        <a class="btn ghost" href="https://wa.me/79256464291" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+      <p style="font-size:15px;margin-top:18px" data-open-now></p>
+    </div>
+    <div class="tint">
+      <svg class="car" viewBox="0 0 520 220" role="img" aria-label="Схема автомобиля с затемнёнными стёклами">
+        <path d="M40 160c0-22 10-34 34-38l60-10 58-52c10-9 22-14 36-14h120c16 0 28 6 38 18l40 48 38 8c20 4 32 18 32 40v10H40z" fill="#4A5563"/>
+        <path d="M206 70c8-8 16-12 28-12h52v50h-110z" fill="#A9C3D6"/><path d="M298 58h50c12 0 20 4 28 14l28 36H298z" fill="#A9C3D6"/>
+        <path id="g1" class="glass" d="M206 70c8-8 16-12 28-12h52v50h-110z" fill="#05080C" fill-opacity=".3"/>
+        <path id="g2" class="glass" d="M298 58h50c12 0 20 4 28 14l28 36H298z" fill="#05080C" fill-opacity=".3"/>
+        <circle cx="130" cy="172" r="30" fill="#0E1620" stroke="#97A1AD" stroke-width="6"/>
+        <circle cx="400" cy="172" r="30" fill="#0E1620" stroke="#97A1AD" stroke-width="6"/>
+        <text x="235" y="96" fill="#0E1620" font-size="13" font-family="Inter Tight">перед</text>
+        <text x="318" y="96" fill="#F3F5F7" font-size="13" font-family="Inter Tight">зад</text>
+      </svg>
+      <div class="ctrl">
+        <label for="vlt">Сколько света пропускают задние стёкла</label>
+        <output id="out" for="vlt">50%</output>
+        <input id="vlt" type="range" min="5" max="90" step="5" value="50">
+        <p class="law" id="law"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="steps" aria-labelledby="h-steps">
+    <h2 id="h-steps">Как проходит визит</h2>
+    <ol>
+      <li><h3>Договорились</h3><p>Пишете в WhatsApp или звоните: марка машины, что нужно сделать, удобный день.</p></li>
+      <li><h3>Приехали</h3><p>Мастер смотрит машину, вы обсуждаете стоимость и сроки.</p></li>
+      <li><h3>Работа</h3><p>Сколько займёт — зависит от машины и объёма работ.</p></li>
+      <li><h3>Забрали</h3><p>Проверяете результат при мастере и уезжаете.</p></li>
+    </ol>
+  </section>
+
+  <section class="two" aria-label="Услуги и отзывы">
+    <article>
+      <h2>Что делают</h2>
+      <p>Детейлинг автомобиля и тонирование стёкол — по данным карточки в 2ГИС.</p>
+      <p>Цены зависят от машины и плёнки: точную стоимость назовут по фото или на месте.</p>
+    </article>
+    <article class="rate">
+      <strong>5,0</strong>
+      <p>Средняя оценка в 2ГИС по 45 отзывам, ноябрь 2026. <a href="https://2gis.ru/moscow/firm/70000001093867253" target="_blank" rel="noopener">Читать отзывы</a></p>
+    </article>
+  </section>
+
+  <section class="contact" id="zapis" aria-labelledby="h-c">
+    <div>
+      <h2 id="h-c">Запись</h2>
+      <p>Спартаковский переулок, 24 стр. 2, первый этаж</p>
+      <p><a href="tel:+79256464291">+7 925 646-42-91</a></p>
+      <p><a href="https://t.me/tonirovka_avtobutik" target="_blank" rel="noopener">Telegram</a>, <a href="mailto:marselmirlan@mail.ru">marselmirlan@mail.ru</a></p>
+      <p><a href="https://yandex.ru/maps/?rtext=~55.775783,37.679873&rtt=auto" target="_blank" rel="noopener">Маршрут на машине</a></p>
+    </div>
+    <form data-lead data-biz="Автобутик" data-wa="79256464291" data-phone="+79256464291" novalidate>
+      <div class="f"><label for="car">Машина</label><input id="car" name="car" data-label="Машина" placeholder="Марка и модель"></div>
+      <div class="f"><label for="svc">Что сделать</label><select id="svc" name="svc" data-label="Услуга"><option>Тонировка</option><option>Детейлинг</option><option>Посоветуйте</option></select></div>
+      <div class="f"><label for="n">Имя</label><input id="n" name="name" autocomplete="name" required></div>
+      <div class="f"><label for="p">Телефон</label><input id="p" name="phone" type="tel" autocomplete="tel" required></div>
+      <button class="btn" type="submit">Отправить мастеру</button>
+    </form>
+  </section>
+</main>
+<footer><div class="wrap"><div class="concept-note">Концепт сайта для портфолио, не официальный сайт «Автобутика». Данные — из открытой карточки 2ГИС, ноябрь 2026. Подсказка про 70% — общее правило техрегламента для лобового и передних боковых стёкол, не консультация.</div></div></footer>
+<script src="../../assets/kit.js" defer></script>
+<script>
+(function () {
+  var r = document.getElementById('vlt'), out = document.getElementById('out'), law = document.getElementById('law');
+  var g1 = document.getElementById('g1'), g2 = document.getElementById('g2');
+  function upd() {
+    var v = +r.value; out.value = v + '%';
+    g2.setAttribute('fill-opacity', (1 - v / 100).toFixed(2));
+    g1.setAttribute('fill-opacity', '.3');
+    law.textContent = v < 70
+      ? 'Для задних стёкол так можно. Лобовое и передние боковые по правилам должны пропускать не меньше 70% света.'
+      : 'Такой уровень подходит и для передних боковых стёкол — по правилам там нужно не меньше 70%.';
+  }
+  r.addEventListener('input', upd); upd();
+})();
+</script>
+</body>
+</html>

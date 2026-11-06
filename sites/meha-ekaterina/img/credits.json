@@ -1,0 +1,23 @@
+{
+ "coat": {
+  "title": "<div class='fn'> Fur coat</div>",
+  "author": "Raimon Furs Ltd",
+  "license": "BY",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source": "https://commons.wikimedia.org/w/index.php?curid=65905133"
+ },
+ "street": {
+  "title": "Fur coats by Bernard Gotfryd",
+  "author": "libraryofcongress",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source": "https://www.rawpixel.com/image/6320033/fur-coats"
+ },
+ "hat": {
+  "title": "Hat - Pillbox, Brown Mink Fur, circa 1960s",
+  "author": "",
+  "license": "BY",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source": "https://collections.museumsvictoria.com.au/items/269372"
+ }
+}

@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Бар Капибар — кофейня с капибарами на Таганской</title>
+<meta name="description" content="Кофейня и зоокафе «Бар Капибар»: Таганская улица, 13 стр. 2. Будни 11:00–22:00, выходные 10:00–22:00. 4,9 в 2ГИС по 336 отзывам.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Бар Капибар — кофе и капибары">
+<meta property="og:image" content="img/rest.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23B5713E'/%3E%3Ccircle cx='22' cy='12' r='2.4' fill='%232B1E16'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800;900&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/kit.css">
+<style>
+:root{
+  --fur:#B5713E; --fur-d:#8C5128; --pond:#2F5D50; --yuzu:#F2C641; --bark:#2B1E16; --water:#E4EEE9; --white:#FFFDF8;
+  --kit-accent:var(--bark); --kit-on-accent:var(--yuzu); --kit-ink:var(--bark); --kit-line:#9FB9AF; --kit-radius:999px; --kit-focus:var(--pond);
+}
+*{box-sizing:border-box}
+body{margin:0;font:400 18px/1.55 Onest,system-ui,sans-serif;color:var(--bark);background:var(--water)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.wrap{width:min(1240px,100% - 32px);margin-inline:auto}
+
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 0}
+.top b{font:800 18px/1 Unbounded,sans-serif}
+.top a{font-weight:600;text-decoration:none}
+
+/* плакат: слово, сквозь которое видно капибару */
+.poster{padding:clamp(8px,2vw,24px) 0 0}
+.word{margin:0;font:900 clamp(54px,16vw,236px)/.95 Unbounded,sans-serif;letter-spacing:-.045em;
+  background:url(img/rest.webp) 42% 55%/cover;-webkit-background-clip:text;background-clip:text;color:transparent;
+  -webkit-text-stroke:0;padding-bottom:.06em}
+@supports not ((-webkit-background-clip:text) or (background-clip:text)){.word{color:var(--fur)}}
+.under{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(20px,4vw,64px);align-items:end;margin-top:clamp(12px,2vw,24px)}
+.under p{font-size:clamp(22px,2.6vw,32px);line-height:1.2;font-weight:500;margin:0;max-width:22ch}
+.facts{display:grid;gap:10px;font-size:16px}
+.facts div{display:flex;justify-content:space-between;gap:12px;border-top:2px solid var(--bark);padding-top:8px}
+.facts span:last-child{font-weight:600;text-align:right}
+.now.is-open{color:var(--pond)}.now.is-closed{color:#A33A1F}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.btn{display:inline-flex;align-items:center;min-height:52px;padding:0 24px;border-radius:999px;background:var(--bark);color:var(--yuzu);font-weight:600;text-decoration:none;border:2px solid var(--bark)}
+.btn.alt{background:transparent;color:var(--bark)}
+.btn:hover{background:var(--pond);border-color:var(--pond);color:var(--white)}
+
+/* две половины: кофе и капибары */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2vw,24px);margin:clamp(56px,8vw,110px) 0}
+.half{border-radius:28px;overflow:hidden;position:relative;min-height:520px;color:var(--white)}
+.half img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.half::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(43,30,22,.82))}
+.half div{position:absolute;left:0;right:0;bottom:0;padding:clamp(20px,3vw,36px);z-index:1}
+.half h2{font:800 clamp(30px,4vw,54px)/1 Unbounded,sans-serif;margin:0 0 10px;letter-spacing:-.02em}
+.half p{margin:0;max-width:36ch}
+
+/* лента с отзывами — одна цифра, без пафоса */
+.band{background:var(--yuzu);border-radius:28px;padding:clamp(28px,5vw,64px);display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,4vw,56px);align-items:center}
+.band strong{font:900 clamp(80px,13vw,180px)/.85 Unbounded,sans-serif;letter-spacing:-.05em}
+.band p{margin:0;font-size:clamp(19px,2vw,24px);max-width:34ch}
+.band a{font-weight:600}
+
+.strip{display:grid;grid-template-columns:2fr 1fr 1fr;gap:14px;margin:clamp(56px,8vw,110px) 0}
+.strip img{border-radius:20px;width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
+.strip figure{margin:0}
+.strip .tall img{aspect-ratio:auto;height:100%}
+
+/* визит */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,60px);padding-bottom:clamp(56px,8vw,100px)}
+.visit h2{font:800 clamp(34px,4.6vw,60px)/1 Unbounded,sans-serif;margin:0 0 20px;letter-spacing:-.02em}
+.visit .addr{font-size:clamp(22px,2.4vw,28px);font-weight:600;margin:0 0 6px}
+.visit ul{list-style:none;padding:0;margin:20px 0;display:grid;gap:8px}
+form{background:var(--white);border-radius:28px;padding:clamp(22px,3vw,40px)}
+form h3{font:800 26px/1.1 Unbounded,sans-serif;margin:0 0 8px}
+form p{margin:0 0 18px;color:#5A4A3F}
+label{display:block;font-size:15px;font-weight:500;margin:12px 0 6px}
+input,select,textarea{width:100%;font:inherit;padding:12px 16px;border:2px solid #CFC5B8;border-radius:16px;background:#fff}
+textarea{min-height:90px}
+form .btn{margin-top:18px;border:0;cursor:pointer;font:inherit;font-weight:600}
+footer{background:var(--bark);color:#E9DED2;padding:32px 0 44px;font-size:15px}
+footer .wrap{display:grid;gap:12px}
+
+@media (max-width:860px){
+  .under,.duo,.visit,.band{grid-template-columns:1fr}
+  .half{min-height:420px}
+  .strip{grid-template-columns:1fr 1fr}.strip .wide{grid-column:1/-1}
+}
+</style>
+</head>
+<body data-hours='{"1":["11:00","22:00"],"2":["11:00","22:00"],"3":["11:00","22:00"],"4":["11:00","22:00"],"5":["11:00","22:00"],"6":["10:00","22:00"],"0":["10:00","22:00"]}'>
+<a class="skip-link" href="#main">К содержанию</a>
+<div class="wrap">
+  <header class="top"><b>Бар Капибар</b><a href="tel:+74952121663">+7 495 212-16-63</a></header>
+</div>
+<main id="main">
+  <div class="wrap">
+    <section class="poster" aria-labelledby="h1">
+      <h1 class="word" id="h1">капибар</h1>
+      <div class="under">
+        <p>Кофейня, где за соседним столиком — капибары. Таганская улица, 13.</p>
+        <div>
+          <div class="facts">
+            <div><span>Будни</span><span>11:00–22:00</span></div>
+            <div><span>Суббота и воскресенье</span><span>10:00–22:00</span></div>
+            <div><span>Сейчас</span><span class="now" data-open-now>—</span></div>
+          </div>
+          <div class="btns">
+            <a class="btn" href="tel:+74952121663">Позвонить</a>
+            <a class="btn alt" href="https://t.me/cpbbar" target="_blank" rel="noopener">Telegram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="duo" aria-label="Что здесь есть">
+      <article class="half">
+        <img src="img/latte.webp" alt="Чашка капучино с рисунком на пенке" loading="lazy" width="1920" height="1280">
+        <div><h2>Кофе</h2><p>Обычная кофейня: можно прийти поработать, встретиться или взять напиток с собой.</p></div>
+      </article>
+      <article class="half">
+        <img src="img/bird.webp" alt="Капибара лежит на траве, на голове у неё сидит птица" loading="lazy" width="1920" height="1280">
+        <div><h2>Капибары</h2><p>Зоокафе: самые спокойные грызуны на свете живут прямо здесь. Как устроено знакомство с ними — спросите по телефону перед визитом.</p></div>
+      </article>
+    </section>
+
+    <section class="band" aria-labelledby="h-rate">
+      <strong aria-hidden="true">4,9</strong>
+      <p id="h-rate">Средняя оценка в 2ГИС по 336 отзывам гостей — ноябрь 2026. <a href="https://2gis.ru/moscow/firm/70000001105346366" target="_blank" rel="noopener">Читать отзывы</a></p>
+    </section>
+
+    <section class="strip" aria-label="Фотографии капибар">
+      <figure class="wide"><img src="img/swim.webp" alt="Семья капибар плывёт по реке" loading="lazy" width="1920" height="1352"></figure>
+      <figure><img src="img/eat.webp" alt="Капибара ест сено" loading="lazy" width="1920" height="1280"></figure>
+      <figure><img src="img/rest.webp" alt="Рыжая капибара отдыхает на траве" loading="lazy" width="1920" height="1280" style="object-position:35% 50%"></figure>
+    </section>
+
+    <section class="visit" aria-labelledby="h-visit">
+      <div>
+        <h2 id="h-visit">Как прийти</h2>
+        <p class="addr">Таганская улица, 13 стр. 2, первый этаж</p>
+        <p>Рядом станции «Марксистская» и «Таганская».</p>
+        <ul>
+          <li><a href="tel:+74952121663">+7 495 212-16-63</a></li>
+          <li><a href="mailto:msk@barcapybar.ru">msk@barcapybar.ru</a></li>
+          <li><a href="https://vk.com/cpbbar" target="_blank" rel="noopener">ВКонтакте</a>, <a href="https://t.me/cpbbar" target="_blank" rel="noopener">Telegram</a></li>
+        </ul>
+        <div class="btns">
+          <a class="btn alt" href="https://yandex.ru/maps/?pt=37.66064,55.740882&z=17&l=map" target="_blank" rel="noopener">Открыть на карте</a>
+        </div>
+      </div>
+      <form data-lead data-biz="Бар Капибар" data-phone="+74952121663" novalidate>
+        <h3>Собираетесь в гости?</h3>
+        <p>Соберём вопрос администратору: когда удобно прийти и сколько вас будет.</p>
+        <label for="n">Имя</label><input id="n" name="name" autocomplete="name" required>
+        <label for="t">Телефон</label><input id="t" name="phone" type="tel" autocomplete="tel" required>
+        <label for="d">Когда хотите прийти</label><input id="d" name="when" type="date" data-label="Дата">
+        <label for="g">Сколько гостей</label>
+        <select id="g" name="guests" data-label="Гостей"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5 и больше</option></select>
+        <button class="btn" type="submit">Подготовить вопрос</button>
+      </form>
+    </section>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <div>Бар Капибар, Таганская улица, 13 стр. 2. <a href="tel:+74952121663">+7 495 212-16-63</a></div>
+    <div class="concept-note">Концепт сайта для портфолио, не официальный сайт «Бар Капибар». Данные — из открытой карточки 2ГИС, ноябрь 2026. Фото капибар иллюстративные.</div>
+    <details class="photo-credits" data-credits><summary>Фотографии — открытые лицензии</summary></details>
+  </div>
+</footer>
+<script src="../../assets/kit.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nemeria — школа танцев на Кутузовском</title>
+<meta name="description" content="Nemeria: обучение танцам, аренда зала, дневной детский лагерь. Кутузовский проспект, 9 корп. 1. Каждый день 10:00–22:00. 5,0 в 2ГИС по 174 отзывам.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Nemeria — танцы на Кутузовском">
+<meta property="og:image" content="img/studio.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%232A1F3D'/%3E%3Cpath d='M8 26V6l16 20V6' stroke='%23FFE3A3' stroke-width='3' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/kit.css">
+<style>
+:root{
+  --aub:#2A1F3D; --aub2:#3A2D52; --spot:#FFE3A3; --oak:#B07A45; --mirror:#D9DCE3; --coral:#FF6F59; --white:#FBFAF8; --mute:#BDB5CC;
+  --kit-accent:var(--coral); --kit-on-accent:#1C1428; --kit-ink:var(--white); --kit-line:#55476E; --kit-radius:4px; --kit-focus:var(--spot);
+}
+*{box-sizing:border-box}
+body{margin:0;font:400 18px/1.6 "Nunito Sans",system-ui,sans-serif;color:var(--white);background:var(--aub)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:Oswald,sans-serif;font-weight:700;margin:0;line-height:.98;letter-spacing:.005em}
+.wrap{width:min(1220px,100% - 32px);margin-inline:auto}
+
+.stage{position:relative;min-height:min(88vh,800px);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.55) saturate(.8)}
+.stage::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 70% at 70% 30%,rgba(255,227,163,.32),transparent 60%),linear-gradient(180deg,rgba(42,31,61,.2),var(--aub) 96%)}
+.stage>*{position:relative;z-index:1}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.bar b{font:700 22px/1 Oswald;letter-spacing:.04em}
+.bar a{text-decoration:none;font-weight:700}
+.stage h1{font-size:clamp(80px,15vw,230px);color:var(--spot)}
+.stage p.lead{font-size:clamp(18px,1.8vw,22px);max-width:36ch;margin:14px 0 0}
+.stage .wrap.bottom{padding-bottom:clamp(28px,4vw,56px)}
+
+/* три двери — табы */
+.doors{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:clamp(-40px,-3vw,-20px);position:relative;z-index:2}
+.door{appearance:none;border:2px solid var(--aub2);background:var(--aub2);color:var(--white);text-align:left;padding:22px 22px 24px;border-radius:4px;cursor:pointer;font:inherit;display:grid;gap:8px;min-height:150px}
+.door b{font:700 clamp(26px,2.8vw,38px)/1 Oswald}
+.door span{color:var(--mute);font-size:16px}
+.door[aria-selected="true"]{background:var(--spot);color:#1C1428;border-color:var(--spot)}
+.door[aria-selected="true"] span{color:#4A3E5E}
+.panel{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(24px,4vw,56px);padding:clamp(36px,5vw,64px) 0;border-bottom:1px solid #4A3D63}
+.panel[hidden]{display:none}
+.panel h2{font-size:clamp(32px,4vw,52px);margin-bottom:14px}
+.panel p{color:var(--mute);margin:0 0 10px;max-width:46ch}
+.panel img{border-radius:4px;aspect-ratio:16/10;object-fit:cover;width:100%;margin-top:18px}
+form{background:var(--aub2);border-radius:4px;padding:clamp(20px,3vw,32px);display:grid;grid-template-columns:1fr 1fr;gap:14px;align-content:start}
+.f{display:grid;gap:6px}.f.w{grid-column:1/-1}
+label{font-size:14px;font-weight:700;color:var(--mute)}
+form input,form select{font:inherit;padding:12px 14px;border:1px solid #5A4C76;border-radius:4px;background:var(--aub);color:var(--white);width:100%;color-scheme:dark}
+.btn{display:inline-flex;align-items:center;min-height:52px;padding:0 24px;border-radius:4px;background:var(--coral);color:#1C1428;font-weight:700;text-decoration:none;border:0;font:inherit;font-weight:700;cursor:pointer}
+.btn:hover{background:#FF8A78}
+form .btn{grid-column:1/-1;justify-self:start}
+.lead-btn--ghost{color:var(--white)}
+
+.info{display:grid;grid-template-columns:auto 1fr 1fr;gap:clamp(24px,4vw,56px);padding:clamp(48px,7vw,90px) 0;align-items:start}
+.info .rate{font:700 clamp(84px,10vw,140px)/.85 Oswald;color:var(--spot)}
+.info p{margin:0 0 8px;color:var(--mute)}
+.info a{color:var(--white)}
+.info h3{font-size:24px;margin-bottom:10px}
+.now.is-open{color:#A6E3A1}.now.is-closed{color:var(--coral)}
+footer{border-top:1px solid #4A3D63;padding:24px 0 44px;font-size:14px;color:var(--mute)}
+@media (max-width:900px){.doors{grid-template-columns:1fr;margin-top:0}.door{min-height:0}.panel,.info,form{grid-template-columns:1fr}}
+</style>
+</head>
+<body data-hours='{"0":["10:00","22:00"],"1":["10:00","22:00"],"2":["10:00","22:00"],"3":["10:00","22:00"],"4":["10:00","22:00"],"5":["10:00","22:00"],"6":["10:00","22:00"]}'>
+<a class="skip-link" href="#main">К содержанию</a>
+<header class="stage">
+  <img src="img/studio.webp" alt="" width="1600" height="1067" fetchpriority="high">
+  <div class="wrap bar"><b>NEMERIA</b><a href="tel:+79690666050">+7 969 066-60-50</a></div>
+  <div class="wrap bottom">
+    <h1>Nemeria</h1>
+    <p class="lead">Школа танцев на Кутузовском проспекте. Занятия, зал в аренду и дневной лагерь для детей — каждый день с 10 до 22.</p>
+  </div>
+</header>
+<main id="main" class="wrap">
+  <div class="doors" role="tablist" aria-label="Что вас интересует">
+    <button class="door" role="tab" id="t1" aria-controls="p1" aria-selected="true"><b>Танцевать</b><span>Записаться на занятие</span></button>
+    <button class="door" role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1"><b>Снять зал</b><span>Для репетиций и съёмок</span></button>
+    <button class="door" role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1"><b>Детский лагерь</b><span>Дневной, в городе</span></button>
+  </div>
+
+  <section class="panel" id="p1" role="tabpanel" aria-labelledby="t1">
+    <div>
+      <h2>Первое занятие</h2>
+      <p>Расскажите, кто будет заниматься и сколько опыта, — администратор подберёт направление и группу и пригласит на занятие.</p>
+      <img src="img/group.webp" alt="Группа танцоров в одинаковой одежде на светлом фоне" loading="lazy" width="1600" height="900">
+    </div>
+    <form data-lead data-biz="Nemeria — занятия" data-wa="79690666050" data-phone="+79690666050" novalidate>
+      <div class="f"><label for="a1">Кто будет заниматься</label><select id="a1" name="who" data-label="Ученик"><option>Взрослый</option><option>Подросток</option><option>Ребёнок</option></select></div>
+      <div class="f"><label for="a2">Опыт</label><select id="a2" name="exp" data-label="Опыт"><option>С нуля</option><option>Немного танцевал(а)</option><option>Занимаюсь давно</option></select></div>
+      <div class="f"><label for="a3">Имя</label><input id="a3" name="name" autocomplete="name" required></div>
+      <div class="f"><label for="a4">Телефон</label><input id="a4" name="phone" type="tel" autocomplete="tel" required></div>
+      <button class="btn" type="submit">Записаться</button>
+    </form>
+  </section>
+
+  <section class="panel" id="p2" role="tabpanel" aria-labelledby="t2" hidden>
+    <div>
+      <h2>Зал в аренду</h2>
+      <p>Nemeria сдаёт помещения в аренду. Свободные часы и условия скажет администратор.</p>
+      <img src="img/hall.webp" alt="Пустой танцевальный зал с деревянным полом и шторами" loading="lazy" width="1600" height="1200">
+    </div>
+    <form data-lead data-biz="Nemeria — аренда зала" data-wa="79690666050" data-phone="+79690666050" novalidate>
+      <div class="f"><label for="b1">Для чего</label><select id="b1" name="goal" data-label="Цель"><option>Репетиция</option><option>Фото или видеосъёмка</option><option>Мастер-класс</option><option>Другое</option></select></div>
+      <div class="f"><label for="b2">Дата</label><input id="b2" name="date" type="date" data-label="Дата"></div>
+      <div class="f"><label for="b3">Сколько часов</label><input id="b3" name="hours" type="number" min="1" value="2" data-label="Часов"></div>
+      <div class="f"><label for="b4">Человек</label><input id="b4" name="people" type="number" min="1" value="5" data-label="Человек"></div>
+      <div class="f"><label for="b5">Имя</label><input id="b5" name="name" autocomplete="name" required></div>
+      <div class="f"><label for="b6">Телефон</label><input id="b6" name="phone" type="tel" autocomplete="tel" required></div>
+      <button class="btn" type="submit">Узнать про свободные часы</button>
+    </form>
+  </section>
+
+  <section class="panel" id="p3" role="tabpanel" aria-labelledby="t3" hidden>
+    <div>
+      <h2>Дневной лагерь</h2>
+      <p>В карточке школы указан дневной детский лагерь. Даты смен, возраст и программу уточните у администратора.</p>
+    </div>
+    <form data-lead data-biz="Nemeria — детский лагерь" data-wa="79690666050" data-phone="+79690666050" novalidate>
+      <div class="f"><label for="c1">Возраст ребёнка</label><input id="c1" name="age" type="number" min="3" max="17" data-label="Возраст"></div>
+      <div class="f"><label for="c2">Когда нужен лагерь</label><input id="c2" name="when" data-label="Когда" placeholder="Например: зимние каникулы"></div>
+      <div class="f"><label for="c3">Имя родителя</label><input id="c3" name="name" autocomplete="name" required></div>
+      <div class="f"><label for="c4">Телефон</label><input id="c4" name="phone" type="tel" autocomplete="tel" required></div>
+      <button class="btn" type="submit">Спросить про смены</button>
+    </form>
+  </section>
+
+  <section class="info" aria-label="Контакты и отзывы">
+    <div><span class="rate">5,0</span><p>в 2ГИС, 174 отзыва,<br>ноябрь 2026. <a href="https://2gis.ru/moscow/firm/70000001056615387" target="_blank" rel="noopener">Читать</a></p></div>
+    <div><h3>Адрес</h3><p>Кутузовский проспект, 9 корп. 1, цокольный этаж</p><p>Каждый день 10:00–22:00. <span class="now" data-open-now></span></p><p><a href="https://yandex.ru/maps/?pt=37.56028,55.748206&z=17&l=map" target="_blank" rel="noopener">Открыть на карте</a></p></div>
+    <div><h3>Связь</h3><p><a href="tel:+79690666050">+7 969 066-60-50</a></p><p><a href="https://wa.me/79690666050" target="_blank" rel="noopener">WhatsApp</a>, <a href="https://t.me/+79690666050" target="_blank" rel="noopener">Telegram</a>, <a href="https://vk.com/nemeriaru" target="_blank" rel="noopener">ВКонтакте</a></p><p><a href="mailto:k@ki.nemeria.ru">k@ki.nemeria.ru</a></p></div>
+  </section>
+</main>
+<footer><div class="wrap">
+  <div class="concept-note">Концепт сайта для портфолио, не официальный сайт школы Nemeria. Данные — из открытой карточки 2ГИС, ноябрь 2026. Фото иллюстративные.</div>
+  <details class="photo-credits" data-credits><summary>Фотографии — открытые лицензии</summary></details>
+</div></footer>
+<script src="../../assets/kit.js" defer></script>
+<script>
+(function () {
+  var tabs = [].slice.call(document.querySelectorAll('.door'));
+  function sel(t) {
+    tabs.forEach(function (x) {
+      var on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1;
+      document.getElementById(x.getAttribute('aria-controls')).hidden = !on;
+    });
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { sel(t); });
+    t.addEventListener('keydown', function (e) {
+      var d = e.key === 'ArrowRight' || e.key === 'ArrowDown' ? 1 : e.key === 'ArrowLeft' || e.key === 'ArrowUp' ? -1 : 0;
+      if (d) { e.preventDefault(); var n = tabs[(i + d + tabs.length) % tabs.length]; sel(n); n.focus(); }
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+ "tools": {
+  "title": "Barbershop Brush",
+  "author": "Nick Demou",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source": "https://stocksnap.io/photo/barbershop-brush-GZP9ZEQPFL"
+ },
+ "scissors": {
+  "title": "Barbershop Scissors",
+  "author": "Nick Demou",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source": "https://stocksnap.io/photo/barbershop-scissors-R9YRHH2JQY"
+ },
+ "chair": {
+  "title": "Free retro barbershop chair",
+  "author": null,
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source": "https://www.rawpixel.com/image/5925744/photo-image-public-domain-black-vintage"
+ },
+ "razor": {
+  "title": "Free barber shave kit image",
+  "author": null,
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source": "https://www.rawpixel.com/image/5926092/photo-image-public-domain-brush-free"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "dog": {
+  "title": "Free yorkshire terrier dog held",
+  "author": null,
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source": "https://www.rawpixel.com/image/5925163/photo-image-background-public-domain-dog"
+ },
+ "cat": {
+  "title": "Chickpea the NCSU CVM Library Cat",
+  "author": "KyleCMSmith",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en/",
+  "source": "https://commons.wikimedia.org/w/index.php?curid=182040709"
+ },
+ "beagle": {
+  "title": "U.S. Department of Agriculture (USDA)",
+  "author": "U.S. Department of Agriculture",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source": "https://www.rawpixel.com/image/3259407/free-photo-image-veterinarian-pet-dog"
+ }
+}

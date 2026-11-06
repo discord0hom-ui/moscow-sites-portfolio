@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grande — торты на заказ на Остоженке</title>
+<meta name="description" content="Grande friends forever: торты и десерты на заказ, доставка. Остоженка, 7 стр. 1. Каждый день 8:00–23:00. 4,7 в 2ГИС по 65 отзывам.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Grande — торт к вашему празднику">
+<meta property="og:image" content="img/heart.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='5' y='13' width='22' height='14' rx='3' fill='%23B3264E'/%3E%3Crect x='9' y='6' width='14' height='9' rx='3' fill='%23C5D6A4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/kit.css">
+<style>
+:root{
+  --meringue:#F7F5F2; --white:#FFFFFF; --pista:#C5D6A4; --pista-l:#E4EDD5; --rasp:#B3264E; --rasp-d:#8E1C3D; --cocoa:#3A2620; --ink2:#6A5952; --gold:#C9A55A; --line:#E2DCD5;
+  --kit-accent:var(--rasp); --kit-on-accent:#fff; --kit-ink:var(--cocoa); --kit-line:var(--line); --kit-radius:999px;
+}
+*{box-sizing:border-box}
+body{margin:0;font:400 17px/1.6 Onest,system-ui,sans-serif;color:var(--cocoa);background:var(--meringue)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;margin:0;line-height:1.02;font-weight:800}
+.wrap{width:min(1240px,100% - 32px);margin-inline:auto}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 0}
+.top b{font:800 26px/1 "Playfair Display";color:var(--rasp)}
+.top a{text-decoration:none;font-weight:600}
+
+/* мозаика: торты разного размера, заголовок внутри сетки */
+.mosaic{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:clamp(110px,12vw,170px);gap:12px;margin:8px 0 clamp(48px,7vw,90px)}
+.mosaic figure{margin:0;border-radius:22px;overflow:hidden;position:relative}
+.mosaic img{width:100%;height:100%;object-fit:cover}
+.mosaic figcaption{position:absolute;left:10px;bottom:10px;font-size:12px;background:rgba(255,255,255,.88);padding:3px 10px;border-radius:999px}
+.t1{grid-column:1/3;grid-row:1/4}.t2{grid-column:5/7;grid-row:1/3}.t3{grid-column:5/6;grid-row:3/5}.t4{grid-column:6/7;grid-row:3/5}.t5{grid-column:1/3;grid-row:4/5}
+.title{grid-column:3/5;grid-row:1/5;background:var(--pista-l);border-radius:22px;padding:clamp(20px,2.6vw,34px);display:flex;flex-direction:column;justify-content:space-between}
+.title h1{font-size:clamp(40px,4.6vw,70px)}
+.title p{margin:14px 0 0;color:var(--ink2)}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;min-height:52px;padding:0 24px;border-radius:999px;background:var(--rasp);color:#fff;font-weight:600;text-decoration:none;border:2px solid var(--rasp)}
+.btn.ghost{background:transparent;color:var(--rasp)}
+.btn:hover{background:var(--rasp-d);border-color:var(--rasp-d);color:#fff}
+
+/* калькулятор веса */
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,64px);align-items:center;background:var(--cocoa);color:var(--meringue);border-radius:28px;padding:clamp(24px,4vw,56px);margin-bottom:clamp(48px,7vw,90px)}
+.calc h2{font-size:clamp(32px,4vw,54px);margin-bottom:14px}
+.calc p{color:#D9CBC3;margin:0 0 10px}
+.calc label{display:block;font-weight:600;margin-bottom:10px}
+.calc input[type=range]{width:100%;accent-color:var(--pista);height:30px}
+.res{display:flex;align-items:baseline;gap:14px;margin-top:16px;flex-wrap:wrap}
+.res strong{font:800 clamp(64px,8vw,110px)/.9 "Playfair Display";color:var(--pista)}
+.res span{font-size:19px}
+.tiers{display:flex;align-items:flex-end;justify-content:center;min-height:240px}
+.tiers div{background:var(--pista);border-radius:10px 10px 4px 4px;margin:0 auto;transition:width .2s,height .2s}
+.stack{display:flex;flex-direction:column-reverse;align-items:center;gap:4px;width:100%}
+
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,3vw,36px);margin-bottom:clamp(48px,7vw,90px)}
+.how h3{font-size:26px;margin-bottom:8px}
+.how p{margin:0;color:var(--ink2)}
+.order{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(24px,4vw,64px);padding:clamp(40px,6vw,80px) 0;border-top:1px solid var(--line)}
+.order h2{font-size:clamp(34px,4.4vw,58px);margin-bottom:16px}
+.order p{margin:0 0 10px;color:var(--ink2)}
+.order a{color:var(--cocoa)}
+form{background:var(--white);border-radius:24px;padding:clamp(20px,3vw,34px);display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.f{display:grid;gap:6px}.f.w{grid-column:1/-1}
+label.l{font-size:14px;font-weight:600}
+form input,form select,form textarea{font:inherit;padding:12px 16px;border:1.5px solid var(--line);border-radius:16px;background:var(--meringue);width:100%}
+form .btn{grid-column:1/-1;justify-self:start;cursor:pointer;font:inherit;font-weight:600}
+footer{border-top:1px solid var(--line);padding:24px 0 44px;font-size:14px;color:var(--ink2)}
+@media (max-width:900px){
+  .mosaic{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}
+  .title{grid-column:1/-1;grid-row:auto}.t1{grid-column:1/2;grid-row:span 2}.t2{grid-column:2/3;grid-row:span 1}
+  .t3,.t4{grid-column:auto;grid-row:auto}.t5{grid-column:1/-1;grid-row:auto}
+  .calc,.order,.how,form{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body data-hours='{"0":["08:00","23:00"],"1":["08:00","23:00"],"2":["08:00","23:00"],"3":["08:00","23:00"],"4":["08:00","23:00"],"5":["08:00","23:00"],"6":["08:00","23:00"]}'>
+<a class="skip-link" href="#main">К содержанию</a>
+<div class="wrap"><header class="top"><b>Grande</b><a href="tel:+74991109170">+7 499 110-91-70</a></header></div>
+<main id="main" class="wrap">
+  <section class="mosaic" aria-labelledby="h1">
+    <div class="title">
+      <div>
+        <h1 id="h1">Торт к вашему празднику</h1>
+        <p>Grande friends forever на Остоженке: торты и десерты на заказ, есть доставка. Открыто каждый день с 8:00 до 23:00.</p>
+      </div>
+      <div class="btns"><a class="btn" href="#zakaz">Заказать торт</a><a class="btn ghost" href="https://wa.me/79999919170" target="_blank" rel="noopener">WhatsApp</a></div>
+    </div>
+    <figure class="t1"><img src="img/heart.webp" alt="Шоколадный торт в форме сердца" width="1416" height="1600" fetchpriority="high"><figcaption>Иллюстрация</figcaption></figure>
+    <figure class="t2"><img src="img/mama.webp" alt="Белый торт с надписью для мамы" width="1600" height="1200"><figcaption>Иллюстрация</figcaption></figure>
+    <figure class="t3"><img src="img/roses.webp" alt="Ярус торта с белыми розами из мастики" loading="lazy" width="683" height="1024"><figcaption>Иллюстрация</figcaption></figure>
+    <figure class="t4"><img src="img/tiers.webp" alt="Трёхъярусный свадебный торт" loading="lazy" width="680" height="1024"><figcaption>Иллюстрация</figcaption></figure>
+    <figure class="t5"><img src="img/pink.webp" alt="Розовый торт с цветами" loading="lazy" width="1024" height="683"><figcaption>Иллюстрация</figcaption></figure>
+  </section>
+
+  <section class="calc" aria-labelledby="h-calc">
+    <div>
+      <h2 id="h-calc">Сколько нужно торта</h2>
+      <p>Двигайте ползунок — посчитаем примерный вес. Ориентир — 150 г на гостя; кондитер поправит под ваш праздник.</p>
+      <label for="guests">Гостей: <output id="gOut" for="guests">12</output></label>
+      <input id="guests" type="range" min="4" max="80" value="12">
+      <div class="res" aria-live="polite"><strong id="kg">1,8</strong><span>кг — примерно столько</span></div>
+    </div>
+    <div class="tiers" aria-hidden="true"><div class="stack" id="stack"></div></div>
+  </section>
+
+  <section class="how" aria-label="Как заказать">
+    <article><h3>Расскажите повод</h3><p>День рождения, свадьба, просто вечер с друзьями — от этого зависят размер и оформление.</p></article>
+    <article><h3>Обсудите детали</h3><p>Начинку, декор и стоимость согласуете с кондитерской в WhatsApp или по телефону.</p></article>
+    <article><h3>Заберите или ждите курьера</h3><p>Остоженка, 7 стр. 1 — или доставка к нужному времени.</p></article>
+  </section>
+
+  <section class="order" id="zakaz" aria-labelledby="h-o">
+    <div>
+      <h2 id="h-o">Заказ</h2>
+      <p>Остоженка, 7 стр. 1. Каждый день 8:00–23:00. <span data-open-now></span></p>
+      <p><a href="tel:+74991109170">+7 499 110-91-70</a><br><a href="tel:+79999919170">+7 999 991-91-70</a><br><a href="tel:+79167982989">+7 916 798-29-89</a></p>
+      <p><a href="https://t.me/friendsforevercompany" target="_blank" rel="noopener">Telegram</a>, <a href="https://instagram.com/grande_by_friendsforever" target="_blank" rel="noopener">Instagram</a>, <a href="mailto:grandefriendsforever@mail.ru">grandefriendsforever@mail.ru</a></p>
+      <p>4,7 из 5 в 2ГИС по 65 отзывам, ноябрь 2026. <a href="https://2gis.ru/moscow/firm/70000001067997423" target="_blank" rel="noopener">Читать</a></p>
+    </div>
+    <form data-lead data-biz="Grande friends forever" data-wa="79999919170" data-phone="+74991109170" novalidate>
+      <div class="f"><label class="l" for="occ">Повод</label><select id="occ" name="occ" data-label="Повод"><option>День рождения</option><option>Детский праздник</option><option>Свадьба</option><option>Корпоратив</option><option>Другое</option></select></div>
+      <div class="f"><label class="l" for="w">Вес, кг</label><input id="w" name="kg" inputmode="decimal" data-label="Вес, кг"></div>
+      <div class="f"><label class="l" for="d">Дата</label><input id="d" name="date" type="date" data-label="Дата"></div>
+      <div class="f"><label class="l" for="how">Получение</label><select id="how" name="how" data-label="Получение"><option>Доставка</option><option>Самовывоз с Остоженки</option></select></div>
+      <div class="f w"><label class="l" for="wish">Пожелания</label><textarea id="wish" name="wish" rows="3" data-label="Пожелания" placeholder="Начинка, цвет, надпись"></textarea></div>
+      <div class="f"><label class="l" for="n">Имя</label><input id="n" name="name" autocomplete="name" required></div>
+      <div class="f"><label class="l" for="p">Телефон</label><input id="p" name="phone" type="tel" autocomplete="tel" required></div>
+      <button class="btn" type="submit">Отправить в кондитерскую</button>
+    </form>
+  </section>
+</main>
+<footer><div class="wrap">
+  <div class="concept-note">Концепт сайта для портфолио, не официальный сайт Grande friends forever. Данные — из открытой карточки 2ГИС, ноябрь 2026. Фото тортов иллюстративные.</div>
+  <details class="photo-credits" data-credits><summary>Фотографии — открытые лицензии</summary></details>
+</div></footer>
+<script src="../../assets/kit.js" defer></script>
+<script>
+(function () {
+  var r = document.getElementById('guests'), out = document.getElementById('gOut'), kg = document.getElementById('kg'), st = document.getElementById('stack'), w = document.getElementById('w');
+  function upd() {
+    var g = +r.value, v = Math.max(1, Math.round(g * 0.15 * 2) / 2);
+    out.value = g; kg.textContent = String(v).replace('.', ','); w.value = String(v).replace('.', ',');
+    var tiers = v <= 2 ? 1 : v <= 5 ? 2 : v <= 9 ? 3 : 4, html = '';
+    var colors = ['#C5D6A4', '#E8B4C3', '#F7F5F2', '#C9A55A'];
+    for (var i = 0; i < tiers; i++) html += '<div style="width:' + (80 - i * 16) + '%;height:46px;background:' + colors[i] + '"></div>';
+    html += '<i style="display:block;width:6px;height:26px;background:#C9A55A;border-radius:3px"></i>';
+    st.innerHTML = html;
+  }
+  r.addEventListener('input', upd); upd();
+})();
+</script>
+</body>
+</html>
