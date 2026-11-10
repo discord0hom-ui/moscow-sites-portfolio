@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Чисто дома — клининг · концепт</title>
+<meta name="description" content="Уборка квартир и офисов: генеральная, после ремонта, поддерживающая. Запись онлайн.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../_общее/kit.css">
+<style>
+:root{--bg:#f3fbfa;--fg:#10322f;--card:#ffffff;--line:#cfe9e5;--accent:#17a391;--on-accent:#fff;--radius:14px;--radius-lg:20px;--font-display:Manrope,system-ui,sans-serif;--font-body:Manrope,system-ui,sans-serif}
+h1,h2,h3{font-family:var(--font-display);font-weight:800;margin:0;line-height:1.08;letter-spacing:-.02em}
+.top{position:sticky;top:0;z-index:20;background:rgba(243,251,250,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;height:70px}
+.logo{font-weight:800;text-decoration:none;font-size:19px;display:flex;align-items:center;gap:10px}
+.logo i{width:12px;height:30px;border-radius:6px;background:linear-gradient(var(--accent),#7fd8cc)}
+[data-nav]{display:flex;gap:24px;font-weight:600;font-size:15px}[data-nav] a{text-decoration:none}[data-nav] a:hover{color:var(--accent)}
+.hero{position:relative;padding:clamp(56px,8vw,100px) 0;overflow:hidden}
+.hero h1{font-size:clamp(42px,6vw,80px);max-width:14ch}
+.hero p{font-size:18px;opacity:.8;max-width:46ch;margin:22px 0 28px}
+.sweep{position:absolute;right:-10%;top:12%;width:44%;height:70%;border-radius:30px;background:linear-gradient(135deg,#dff5f1,#b8ebe3);overflow:hidden}
+.sweep::after{content:"";position:absolute;top:0;bottom:0;width:30%;left:-40%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.85),transparent);animation:clean 4s ease-in-out infinite}
+@keyframes clean{to{left:110%}}
+.sweep .sparkle{position:absolute;width:18px;height:18px;background:#fff;clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%);animation:twinkle 2.6s ease-in-out infinite}
+.sweep .sparkle:nth-child(2){left:30%;top:40%;animation-delay:-.8s}.sweep .sparkle:nth-child(3){left:60%;top:70%;animation-delay:-1.6s}
+@keyframes twinkle{0%,100%{transform:scale(.4);opacity:.4}50%{transform:scale(1.2);opacity:1}}
+.btn{padding:15px 28px;font-weight:800}
+.sec{padding:clamp(54px,7vw,90px) 0}
+.sec h2{font-size:clamp(32px,4vw,50px);margin-bottom:28px}
+.pkgs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pkg{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:30px;transition:transform .35s,box-shadow .35s}
+.pkg:hover{transform:translateY(-6px);box-shadow:0 26px 40px -28px rgba(23,163,145,.6)}
+.pkg h3{font-size:22px;margin-bottom:8px}
+.pkg p{opacity:.75;margin:0 0 16px;font-size:15px}
+.pkg ul{margin:0 0 18px;padding:0 0 0 18px;font-size:15px;line-height:1.8}
+.pkg b{font-size:26px;color:var(--accent)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+footer{padding:34px 0;font-size:14px;opacity:.7;text-align:center}
+@media (max-width:900px){.pkgs,.split{grid-template-columns:1fr}.sweep{display:none}[data-nav]{display:none}}
+@media (max-width:820px){[data-nav].open{position:absolute;top:70px;left:0;right:0;background:var(--bg);padding:18px 4vw;border-bottom:1px solid var(--line)}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="#top"><i></i>Чисто дома</a>
+  <nav data-nav><a href="#услуги">Услуги</a><a href="#запись">Запись</a><a href="#контакты">Контакты</a></nav>
+  <button class="nav-toggle" data-nav-toggle aria-label="Меню" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div></header>
+
+<main id="top">
+<section class="hero wrap">
+  <div class="sweep" aria-hidden="true"><span class="sparkle"></span><span class="sparkle"></span><span class="sparkle"></span></div>
+  <h1 data-reveal>Чисто там, где вы <span style="color:var(--accent)">живёте</span></h1>
+  <p data-reveal style="--d:.1s">Уборка квартир и офисов после ремонта, генеральная и поддерживающая. Одна команда, одни средства, фиксированная цена до выезда. Записаться можно онлайн.</p>
+  <a data-reveal style="--d:.2s" class="btn btn-primary" href="#запись" style="background:var(--accent);color:#fff;text-decoration:none;display:inline-block;border-radius:14px">Вызвать клинера</a>
+</section>
+
+<section id="услуги" class="sec wrap">
+  <h2 data-reveal>Пакеты уборки</h2>
+  <div class="pkgs">
+    <article class="pkg" data-reveal><h3>Поддерживающая</h3><p>Для квартир, где уже всё чисто.</p><ul><li>Пыль, пол, санузел</li><li>Кухня: плита и раковина</li></ul><b>от 2 500 ₽</b></article>
+    <article class="pkg" data-reveal style="--d:.1s"><h3>Генеральная</h3><p>Глубокая уборка до блеска.</p><ul><li>Всё из поддерживающей</li><li>Духовка, фасады, окна</li></ul><b>от 6 000 ₽</b></article>
+    <article class="pkg" data-reveal style="--d:.2s"><h3>После ремонта</h3><p>Строительная пыль и остатки клея.</p><ul><li>Вывод мусора из квартиры</li><li>Мытьё всех поверхностей</li></ul><b>от 9 000 ₽</b></article>
+  </div>
+  <p style="opacity:.6;font-size:14px;margin-top:20px">Цена зависит от площади. Точную сумму назовёт администратор при записи.</p>
+</section>
+
+<section id="запись" class="sec wrap split">
+  <div data-reveal><h2>Запись</h2><p style="opacity:.8;max-width:40ch">Выберите пакет, день и время. Администратор подтвердит выезд в WhatsApp.</p>
+    <p style="opacity:.6;font-size:14px">Демо: показано, как устроена запись. Календарь подключается к вашей CRM.</p></div>
+  <div data-reveal style="--d:.1s" data-booking></div>
+</section>
+
+<section id="контакты" class="sec wrap split">
+  <div data-reveal><h2>Контакты</h2><p>Телефон: укажите свой<br>Работаем ежедневно, 8:00–21:00</p></div>
+  <div data-reveal style="--d:.1s"><p style="opacity:.8">Фиксированная цена называется до выезда. Доплат за материалы нет, если не договорились заранее.</p></div>
+</section>
+</main>
+
+<footer>© Чисто дома · концепт-сайт, название условное · Сделано для демонстрации</footer>
+
+<script>
+window.SITE={whatsapp:'79000000000',hours:[8,21],step:60,closedDays:[],
+services:[
+ {name:'Поддерживающая уборка',minutes:120,price:'от 2 500 ₽'},
+ {name:'Генеральная уборка',minutes:240,price:'от 6 000 ₽'},
+ {name:'Уборка после ремонта',minutes:300,price:'от 9 000 ₽'}],
+masters:[]};
+</script>
+<script src="../_общее/kit.js"></script>
+</body>
+</html>

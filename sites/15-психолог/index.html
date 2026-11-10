@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Опора — психолог · концепт</title>
+<meta name="description" content="Психолог: индивидуальные консультации, онлайн и офлайн. Первая встреча — знакомство. Запись онлайн.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,400;0,600;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../_общее/kit.css">
+<style>
+:root{--bg:#f2ede5;--fg:#1f2d44;--card:#faf7f2;--line:#dcd3c4;--accent:#3b5b7a;--on-accent:#fff;--radius:12px;--radius-lg:18px;--font-display:Literata,Georgia,serif;--font-body:Inter,system-ui,sans-serif}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;margin:0;line-height:1.2}
+.top{position:sticky;top:0;z-index:20;background:rgba(242,237,229,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;height:70px}
+.logo{font-family:var(--font-display);font-size:22px;text-decoration:none}
+[data-nav]{display:flex;gap:24px;font-size:15px}[data-nav] a{text-decoration:none;opacity:.8}[data-nav] a:hover{opacity:1;color:var(--accent)}
+.hero{padding:clamp(70px,10vw,130px) 0 90px;max-width:760px;margin:0 auto;text-align:center}
+.hero h1{font-size:clamp(40px,5.4vw,66px);font-style:italic}
+.hero p{font-size:19px;line-height:1.7;opacity:.82;margin:26px auto 34px;max-width:50ch}
+.breathe-line{width:120px;height:2px;margin:0 auto 40px;background:var(--accent);opacity:.5;animation:wide 6s ease-in-out infinite}
+@keyframes wide{0%,100%{width:60px}50%{width:200px}}
+.btn{padding:15px 30px;font-weight:500;border-radius:999px}
+.sec{padding:clamp(56px,8vw,96px) 0}
+.sec h2{font-size:clamp(30px,3.8vw,44px);margin-bottom:24px}
+.narrow{max-width:760px;margin:0 auto}
+.topics{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.topic{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:24px}
+.topic h3{font-size:20px;margin-bottom:8px}
+.topic p{margin:0;opacity:.75;font-size:15px;line-height:1.6}
+details{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 22px;margin-bottom:12px}
+details summary{cursor:pointer;font-family:var(--font-display);font-size:19px;list-style:none;display:flex;justify-content:space-between}
+details summary::after{content:"+";font-size:24px;line-height:1;transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:14px 0 4px;opacity:.8;line-height:1.7}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+footer{padding:34px 0;text-align:center;font-size:14px;opacity:.7;border-top:1px solid var(--line)}
+@media (max-width:900px){.split,.topics{grid-template-columns:1fr}[data-nav]{display:none}}
+@media (max-width:820px){[data-nav].open{position:absolute;top:70px;left:0;right:0;background:var(--bg);padding:18px 4vw;border-bottom:1px solid var(--line)}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="#top">Опора</a>
+  <nav data-nav><a href="#с-чем">С чем приходят</a><a href="#вопросы">Вопросы</a><a href="#запись">Запись</a></nav>
+  <button class="nav-toggle" data-nav-toggle aria-label="Меню" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div></header>
+
+<main id="top">
+<section class="hero wrap">
+  <div class="breathe-line" aria-hidden="true"></div>
+  <h1 data-reveal>Можно не справляться одному</h1>
+  <p data-reveal style="--d:.1s">Индивидуальные консультации онлайн и в кабинете. Здесь можно говорить о том, что не получается сказать близким. Первая встреча — знакомство, без обязательств продолжать.</p>
+  <a data-reveal style="--d:.2s" class="btn" href="#запись" style="background:var(--accent);color:#fff;text-decoration:none;display:inline-block">Записаться на знакомство</a>
+</section>
+
+<section id="с-чем" class="sec wrap narrow">
+  <h2 data-reveal>С чем обращаются</h2>
+  <p data-reveal style="opacity:.8;line-height:1.7">Тревога, выгорание, отношения, переезд или потеря. Не нужно иметь «серьёзную» проблему, чтобы прийти.</p>
+  <div class="topics">
+    <div class="topic" data-reveal><h3>Тревога и напряжение</h3><p>Разбираем, откуда оно берётся и что помогает в моменте.</p></div>
+    <div class="topic" data-reveal style="--d:.1s"><h3>Отношения</h3><p>Пары и отдельные люди: что происходит и как говорить о важном.</p></div>
+    <div class="topic" data-reveal style="--d:.2s"><h3>Работа и выгорание</h3><p>Границы, усталость и решения о будущем.</p></div>
+    <div class="topic" data-reveal style="--d:.3s"><h3>Переходы и потери</h3><p>Развод, переезд, утрата. Время, которое нужно прожить.</p></div>
+  </div>
+</section>
+
+<section id="вопросы" class="sec wrap narrow">
+  <h2 data-reveal>Частые вопросы</h2>
+  <details data-reveal><summary>Что будет на первой встрече?</summary><p>Познакомимся, вы расскажете, что привело. Мы вместе решим, нужна ли регулярная работа и в каком формате.</p></details>
+  <details data-reveal><summary>Можно ли онлайн?</summary><p>Да, видеосвязь подходит, если вы в другом городе или не хотите выходить из дома.</p></details>
+  <details data-reveal><summary>Как перенести встречу?</summary><p>Напишите в WhatsApp не позже чем за сутки: перенесём без вопросов.</p></details>
+</section>
+
+<section id="запись" class="sec wrap">
+  <div class="split">
+    <div data-reveal><h2>Запись</h2><p style="opacity:.8;line-height:1.7">Выберите формат, день и время. Подтверждение придёт в WhatsApp. Все записи конфиденциальны.</p>
+      <p style="opacity:.6;font-size:14px">Демо: показано, как устроена запись. Календарь подключается к вашему расписанию.</p></div>
+    <div data-reveal style="--d:.1s" data-booking></div>
+  </div>
+</section>
+</main>
+
+<footer>© Опора · концепт-сайт, имя условное · Сделано для демонстрации</footer>
+
+<script>
+window.SITE={whatsapp:'79000000000',hours:[10,20],step:60,closedDays:[0],
+services:[
+ {name:'Знакомство, первая встреча',minutes:60,price:'уточняйте'},
+ {name:'Консультация, онлайн',minutes:50,price:'уточняйте'},
+ {name:'Консультация, в кабинете',minutes:50,price:'уточняйте'}],
+masters:[{name:'Светлана',role:'психолог'}]};
+</script>
+<script src="../_общее/kit.js"></script>
+</body>
+</html>

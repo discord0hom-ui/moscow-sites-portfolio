@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Дыхание — студия йоги · концепт</title>
+<meta name="description" content="Йога и пилатес: группы и индивидуальные занятия. Запишитесь на пробное занятие онлайн.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../_общее/kit.css">
+<style>
+:root{--bg:#eef2ea;--fg:#243027;--card:#f8faf5;--line:#d3dccb;--accent:#5b7f63;--on-accent:#fff;--radius:999px;--radius-lg:28px;--font-display:Fraunces,Georgia,serif;--font-body:Karla,system-ui,sans-serif}
+h1,h2,h3{font-family:var(--font-display);font-weight:400;margin:0;line-height:1.1}
+.top{position:sticky;top:0;z-index:20;background:rgba(238,242,234,.9);backdrop-filter:blur(8px)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;height:70px}
+.logo{font-family:var(--font-display);font-size:24px;font-style:italic;text-decoration:none}
+[data-nav]{display:flex;gap:26px;font-size:15px}
+[data-nav] a{text-decoration:none}[data-nav] a:hover{color:var(--accent)}
+.hero{padding:clamp(50px,8vw,110px) 0 70px;text-align:center}
+.breath{position:relative;width:min(340px,70vw);aspect-ratio:1;margin:0 auto 40px}
+.breath i{position:absolute;inset:0;border-radius:50%;border:1.5px solid var(--accent);opacity:.35;animation:breathe 9s ease-in-out infinite}
+.breath i:nth-child(2){inset:18%;animation-delay:-1.5s;background:radial-gradient(circle,rgba(91,127,99,.25),transparent 70%)}
+.breath i:nth-child(3){inset:34%;background:var(--accent);opacity:.85;animation-delay:-3s}
+.breath span{position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-family:var(--font-display);font-style:italic;font-size:22px;animation:words 9s ease-in-out infinite}
+@keyframes breathe{0%,100%{transform:scale(.82)}50%{transform:scale(1.08)}}
+@keyframes words{0%,40%{opacity:1}50%,90%{opacity:0}100%{opacity:1}}
+.hero h1{font-size:clamp(40px,6vw,76px);max-width:16ch;margin:0 auto}
+.hero p{max-width:50ch;margin:20px auto 30px;opacity:.8;font-size:18px}
+.btn{padding:15px 30px;font-weight:700}
+.sec{padding:clamp(56px,8vw,100px) 0}
+.sec h2{font-size:clamp(34px,4.5vw,56px);margin-bottom:12px}
+.lead{opacity:.75;max-width:52ch;margin-bottom:36px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--card);border-radius:var(--radius-lg);padding:30px 26px;border:1px solid var(--line);transition:transform .4s,background .4s}
+.card:hover{transform:translateY(-6px);background:#fff}
+.card h3{font-size:24px;margin-bottom:10px}
+.card p{margin:0 0 14px;opacity:.75}
+.card b{color:var(--accent)}
+.split{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:start}
+.sched{display:grid;gap:10px}
+.sched div{display:flex;justify-content:space-between;padding:14px 18px;background:var(--card);border-radius:16px;border:1px solid var(--line)}
+footer{padding:36px 0;font-size:14px;opacity:.75;text-align:center}
+@media (max-width:900px){.grid,.split{grid-template-columns:1fr}[data-nav]{display:none}}
+@media (max-width:820px){[data-nav].open{position:absolute;top:70px;left:0;right:0;background:var(--bg);padding:18px 4vw}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="#top">Дыхание</a>
+  <nav data-nav><a href="#направления">Направления</a><a href="#расписание">Расписание</a><a href="#запись">Запись</a><a href="#о">О студии</a></nav>
+  <button class="nav-toggle" data-nav-toggle aria-label="Меню" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div></header>
+
+<main id="top">
+<section class="hero wrap">
+  <div class="breath" aria-hidden="true"><i></i><i></i><i></i><span>вдох · выдох</span></div>
+  <h1 data-reveal>Тело, которое вспоминает, как <em>отдыхать</em></h1>
+  <p data-reveal style="--d:.1s">Йога и пилатес в небольших группах. Первое занятие пробное — приходите в удобное время, без подготовки.</p>
+  <div data-reveal style="--d:.2s"><a class="btn btn-ghost" href="#запись" style="text-decoration:none">Пробное занятие</a></div>
+</section>
+
+<section id="направления" class="sec wrap">
+  <h2 data-reveal>Направления</h2>
+  <p class="lead" data-reveal>Занятия идут группами до 8 человек. Инструктор подскажет, с чего начать, если вы впервые.</p>
+  <div class="grid">
+    <article class="card" data-reveal><h3>Хатха-йога</h3><p>Спокойный темп, работа с дыханием и осанкой.</p><b>Группа · 60 минут</b></article>
+    <article class="card" data-reveal style="--d:.1s"><h3>Виньяса</h3><p>Плавные связки движений под музыку.</p><b>Группа · 75 минут</b></article>
+    <article class="card" data-reveal style="--d:.2s"><h3>Пилатес</h3><p>Укрепление корпуса и гибкость без перегрузки.</p><b>Группа · 55 минут</b></article>
+  </div>
+</section>
+
+<section id="расписание" class="sec wrap split">
+  <div data-reveal><h2>Расписание</h2><p class="lead">Пример недели. Точное расписание меняется по сезонам — актуальное видно в записи.</p></div>
+  <div class="sched" data-reveal style="--d:.1s">
+    <div><span>Понедельник</span><span>Хатха · 19:00</span></div>
+    <div><span>Среда</span><span>Виньяса · 08:00</span></div>
+    <div><span>Пятница</span><span>Пилатес · 19:00</span></div>
+    <div><span>Суббота</span><span>Хатха · 10:00</span></div>
+  </div>
+</section>
+
+<section id="запись" class="sec wrap">
+  <div class="split">
+    <div data-reveal><h2>Запись</h2><p class="lead">Выберите направление, инструктора, день и время. Инструктор подтвердит место в WhatsApp.</p>
+      <p style="opacity:.6;font-size:14px">Демо: показано, как устроена запись. Реальное расписание подключается к сервису записи студии.</p></div>
+    <div data-reveal style="--d:.1s" data-booking></div>
+  </div>
+</section>
+
+<section id="о" class="sec wrap split">
+  <div data-reveal><h2>О студии</h2><p class="lead">Маленький зал, тёплый свет и инструкторы, которые поправляют мягко. Адрес: укажите свой. Телефон: укажите свой.</p></div>
+  <div data-reveal style="--d:.1s"><p class="lead">Коврики и реквизит — в студии. Приходите в удобной одежде за 10 минут до начала.</p></div>
+</section>
+</main>
+
+<footer>© Дыхание · концепт-сайт, название условное · Сделано для демонстрации</footer>
+
+<script>
+window.SITE={whatsapp:'79000000000',hours:[8,21],step:60,closedDays:[],
+services:[
+ {name:'Хатха-йога, группа',minutes:60,price:'первое занятие бесплатно'},
+ {name:'Виньяса, группа',minutes:75,price:'разовое занятие'},
+ {name:'Пилатес, группа',minutes:55,price:'разовое занятие'},
+ {name:'Индивидуальное занятие',minutes:60,price:'по договорённости'}],
+masters:[{name:'Лена',role:'инструктор хатха'},{name:'Сергей',role:'инструктор виньяса'}]};
+</script>
+<script src="../_общее/kit.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Кросс — барбершоп · концепт</title>
+<meta name="description" content="Барбершоп: стрижки, борода, бритьё. Выберите мастера и время онлайн.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../_общее/kit.css">
+<style>
+:root{--bg:#0f1110;--fg:#efe9dc;--card:#171a18;--line:#2b302c;--accent:#c8a24a;--on-accent:#111;--radius:6px;--radius-lg:8px;--font-display:Oswald,Impact,sans-serif;--font-body:Inter,system-ui,sans-serif}
+h1,h2,h3{font-family:var(--font-display);text-transform:uppercase;letter-spacing:.02em;margin:0;line-height:.95}
+.top{position:sticky;top:0;z-index:20;background:rgba(15,17,16,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:var(--font-display);font-size:26px;letter-spacing:.08em;text-decoration:none;text-transform:uppercase;display:flex;align-items:center;gap:12px}
+.pole{width:14px;height:30px;border-radius:7px;border:1px solid var(--accent);background:repeating-linear-gradient(-45deg,var(--accent) 0 4px,#111 4px 8px);background-size:200% 200%;animation:pole 1.6s linear infinite}
+@keyframes pole{to{background-position:0 16px}}
+[data-nav]{display:flex;gap:28px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:.06em;font-size:15px}
+[data-nav] a{text-decoration:none;opacity:.8}[data-nav] a:hover{color:var(--accent);opacity:1}
+.hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;padding:120px 0 80px;overflow:hidden;
+  background:radial-gradient(900px 500px at 80% 20%,rgba(200,162,74,.18),transparent 60%),linear-gradient(180deg,#0f1110,#0b0d0c)}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 118px,rgba(255,255,255,.035) 118px 119px);animation:slide 18s linear infinite}
+@keyframes slide{to{background-position:-600px 0}}
+.hero h1{font-size:clamp(68px,14vw,190px)}
+.hero h1 span{display:block;color:transparent;-webkit-text-stroke:1.5px var(--accent)}
+.hero p{max-width:46ch;margin:26px 0 30px;opacity:.8;font-size:17px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{text-transform:uppercase;font-family:var(--font-display);letter-spacing:.06em;font-size:16px;border-radius:var(--radius)}
+.btn:hover{box-shadow:0 0 0 0 transparent;transform:none;background:#e0b65a}
+.sec{padding:clamp(64px,9vw,120px) 0}
+.sec h2{font-size:clamp(44px,6vw,80px);margin-bottom:40px}
+.table{width:100%;border-collapse:collapse}
+.table td{padding:20px 6px;border-bottom:1px solid var(--line);font-size:17px}
+.table td:last-child{text-align:right;font-family:var(--font-display);font-size:22px;color:var(--accent);white-space:nowrap}
+.table tr{transition:background .25s}
+.table tr:hover{background:rgba(200,162,74,.06)}
+.table small{display:block;opacity:.55;font-size:13px;margin-top:3px}
+.barbers{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line)}
+.b{padding:34px 26px;border-right:1px solid var(--line);position:relative;overflow:hidden}
+.b:last-child{border-right:0}
+.b::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .5s}
+.b:hover::after{transform:scaleX(1)}
+.b h3{font-size:34px}
+.b small{opacity:.65}
+.b .n{font-family:var(--font-display);font-size:60px;color:rgba(200,162,74,.25);line-height:1}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+footer{padding:36px 0;border-top:1px solid var(--line);font-size:14px;opacity:.7}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media (max-width:900px){.barbers,.split{grid-template-columns:1fr}.b{border-right:0;border-bottom:1px solid var(--line)}[data-nav]{display:none}}
+@media (max-width:820px){[data-nav].open{position:absolute;top:68px;left:0;right:0;background:#0f1110;padding:20px 4vw;border-bottom:1px solid var(--line)}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="#top"><i class="pole"></i>Кросс</a>
+  <nav data-nav><a href="#прайс">Прайс</a><a href="#мастера">Мастера</a><a href="#запись">Запись</a><a href="#контакты">Контакты</a></nav>
+  <button class="nav-toggle" data-nav-toggle aria-label="Меню" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+  <p data-reveal style="text-transform:uppercase;letter-spacing:.2em;font-size:13px;color:var(--accent)">Барбершоп · стрижки и борода</p>
+  <h1 data-reveal style="--d:.1s">Чисто<span>Точно</span></h1>
+  <p data-reveal style="--d:.2s">Мастера работают по записи, поэтому никто не сидит в очереди. Выберите мастера и время — заявка уйдёт в WhatsApp.</p>
+  <div data-reveal style="--d:.3s" class="btns"><a class="btn btn-primary" href="#запись" style="background:var(--accent);color:#111;padding:14px 26px;text-decoration:none;display:inline-block">Записаться</a><a class="btn" href="#прайс" style="border:1px solid var(--line);color:var(--fg);padding:14px 26px;text-decoration:none;display:inline-block">Прайс</a></div>
+</div></section>
+
+<section id="прайс" class="sec wrap split">
+  <div data-reveal><h2>Прайс</h2><p style="opacity:.75;max-width:38ch">Цены ориентировочные. Борода и стрижка выполняются в одной записи, без доплат за переход.</p></div>
+  <table class="table" data-reveal style="--d:.1s">
+    <tr><td>Мужская стрижка<small>60 минут</small></td><td>1 200 ₽</td></tr>
+    <tr><td>Борода: форма и уход<small>30 минут</small></td><td>700 ₽</td></tr>
+    <tr><td>Стрижка + борода<small>90 минут</small></td><td>1 800 ₽</td></tr>
+    <tr><td>Бритьё опасной бритвой<small>45 минут</small></td><td>1 000 ₽</td></tr>
+    <tr><td>Детская стрижка<small>40 минут</small></td><td>800 ₽</td></tr>
+  </table>
+</section>
+
+<section id="мастера" class="sec wrap">
+  <h2 data-reveal>Мастера</h2>
+  <div class="barbers" data-reveal>
+    <article class="b"><div class="n">01</div><h3>Игорь</h3><small>Старший барбер · классика и фейды</small></article>
+    <article class="b"><div class="n">02</div><h3>Кирилл</h3><small>Барбер · текстуры и креатив</small></article>
+    <article class="b"><div class="n">03</div><h3>Тимур</h3><small>Барбер · борода и бритьё</small></article>
+  </div>
+</section>
+
+<section id="запись" class="sec wrap">
+  <div class="split">
+    <div data-reveal><h2>Запись</h2><p style="opacity:.75;max-width:38ch">Выберите услугу, мастера, день и время. Администратор подтверждает запись в WhatsApp.</p>
+      <p style="opacity:.55;font-size:14px">Демо: показано, как устроена запись. Реальный календарь подключается к вашей CRM или сервису записи.</p></div>
+    <div data-reveal style="--d:.1s" data-booking></div>
+  </div>
+</section>
+
+<section id="контакты" class="sec wrap split">
+  <div data-reveal><h2>Адрес</h2><p>Укажите адрес барбершопа<br>Телефон: укажите свой<br>Ежедневно 10:00–21:00</p></div>
+  <div data-reveal style="--d:.1s"><p style="opacity:.75">Опоздали или не можете прийти? Напишите в WhatsApp — перенесём запись.</p></div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© Кросс · концепт-сайт, название и цены условные</span><span>Сделано для демонстрации</span></div></footer>
+
+<script>
+window.SITE={whatsapp:'79000000000',hours:[10,21],step:30,closedDays:[],
+services:[
+ {name:'Мужская стрижка',minutes:60,price:'1 200 ₽'},
+ {name:'Борода: форма и уход',minutes:30,price:'700 ₽'},
+ {name:'Стрижка + борода',minutes:90,price:'1 800 ₽'},
+ {name:'Бритьё опасной бритвой',minutes:45,price:'1 000 ₽'}],
+masters:[{name:'Игорь',role:'старший барбер'},{name:'Кирилл',role:'барбер'},{name:'Тимур',role:'барбер'}]};
+</script>
+<script src="../_общее/kit.js"></script>
+</body>
+</html>

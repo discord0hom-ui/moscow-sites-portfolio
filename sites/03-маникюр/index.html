@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Лаборатория лака — маникюр · концепт</title>
+<meta name="description" content="Маникюр, педикюр и дизайн ногтей. Выберите мастера и время онлайн.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../_общее/kit.css">
+<style>
+:root{--bg:#f5f1fb;--fg:#241b38;--card:#ffffff;--line:#e2d9f2;--accent:#7b4bd6;--on-accent:#fff;--radius:22px;--radius-lg:30px;--font-display:Unbounded,system-ui,sans-serif;--font-body:Figtree,system-ui,sans-serif}
+h1,h2,h3{font-family:var(--font-display);font-weight:800;margin:0;line-height:1.05;letter-spacing:-.02em}
+.top{position:sticky;top:0;z-index:20;background:rgba(245,241,251,.92);backdrop-filter:blur(10px)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:var(--font-display);font-weight:800;font-size:17px;text-decoration:none}
+[data-nav]{display:flex;gap:24px;font-weight:600;font-size:15px}
+[data-nav] a{text-decoration:none}[data-nav] a:hover{color:var(--accent)}
+.hero{padding:70px 0 40px;position:relative;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.55;animation:float 10s ease-in-out infinite}
+.blob.a{width:340px;height:340px;background:#d9c6ff;right:-60px;top:-40px}
+.blob.b{width:180px;height:180px;background:#ffd6e8;left:40%;bottom:-40px;animation-delay:-4s}
+.blob.c{width:110px;height:110px;background:#c4e8ff;right:30%;top:40%;animation-delay:-7s}
+@keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(18px,-22px)}}
+.hero h1{font-size:clamp(44px,7vw,92px);max-width:12ch}
+.hero h1 b{color:var(--accent)}
+.hero p{font-size:18px;max-width:44ch;opacity:.8;margin:22px 0 30px}
+.btn{border-radius:999px;padding:16px 28px;font-weight:700}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.sec{padding:clamp(56px,8vw,100px) 0}
+.sec h2{font-size:clamp(30px,4vw,48px);margin-bottom:34px}
+.bottles{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.bottle{background:var(--card);border-radius:var(--radius-lg);padding:26px 22px;border:1px solid var(--line);transition:transform .35s,box-shadow .35s}
+.bottle:hover{transform:translateY(-8px);box-shadow:0 24px 40px -26px rgba(123,75,214,.6)}
+.bottle .dot{width:54px;height:72px;border-radius:14px 14px 22px 22px;margin-bottom:18px;background:linear-gradient(180deg,#fff 0 16%,var(--c) 16%)}
+.bottle h3{font-size:16px;margin-bottom:8px}
+.bottle p{margin:0;opacity:.7;font-size:14px}
+.bottle b{display:block;margin-top:14px;font-family:var(--font-display);font-size:20px;color:var(--accent)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s}
+.steps div{background:var(--card);border-radius:var(--radius-lg);padding:26px;border:1px solid var(--line)}
+.steps div::before{counter-increment:s;content:counter(s);display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--accent);color:#fff;font-weight:800;margin-bottom:14px}
+.steps p{margin:0;opacity:.75}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+footer{padding:36px 0;font-size:14px;opacity:.75}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media (max-width:900px){.bottles{grid-template-columns:1fr 1fr}.steps,.split{grid-template-columns:1fr}[data-nav]{display:none}}
+@media (max-width:820px){[data-nav].open{position:absolute;top:72px;left:0;right:0;background:var(--bg);padding:18px 4vw}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="#top">ЛАК ЛАБ</a>
+  <nav data-nav><a href="#услуги">Услуги</a><a href="#как">Как записаться</a><a href="#запись">Запись</a><a href="#контакты">Контакты</a></nav>
+  <button class="nav-toggle" data-nav-toggle aria-label="Меню" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="blob a"></div><div class="blob b"></div><div class="blob c"></div>
+<div class="wrap" style="position:relative">
+  <h1 data-reveal>Маникюр, который <b>держится</b> две недели</h1>
+  <p data-reveal style="--d:.1s">Гель-лак, дизайн и уход. Выберите цвет на мастере, время и день онлайн — заявка уходит в WhatsApp студии.</p>
+  <div data-reveal style="--d:.2s" class="btns"><a class="btn" href="#запись" style="background:var(--accent);color:#fff;text-decoration:none">Записаться онлайн</a><a class="btn" href="#услуги" style="border:1.5px solid var(--line);color:var(--fg);text-decoration:none">Услуги и цены</a></div>
+</div></section>
+
+<section id="услуги" class="sec wrap">
+  <h2 data-reveal>Услуги</h2>
+  <div class="bottles">
+    <article class="bottle" data-reveal style="--c:#c9a8ff"><div class="dot" style="--c:#c9a8ff"></div><h3>Маникюр с покрытием</h3><p>Форма, кутикула, гель-лак</p><b>1 600 ₽</b></article>
+    <article class="bottle" data-reveal style="--d:.08s;--c:#ffb3d1"><div class="dot" style="--c:#ffb3d1"></div><h3>Педикюр с покрытием</h3><p>Обработка стоп и гель-лак</p><b>2 200 ₽</b></article>
+    <article class="bottle" data-reveal style="--d:.16s;--c:#9fd8ff"><div class="dot" style="--c:#9fd8ff"></div><h3>Дизайн ногтей</h3><p>Втирка, стразы, роспись</p><b>от 300 ₽</b></article>
+    <article class="bottle" data-reveal style="--d:.24s;--c:#c6f0c2"><div class="dot" style="--c:#c6f0c2"></div><h3>Снятие покрытия</h3><p>Аккуратно, без повреждения пластины</p><b>400 ₽</b></article>
+  </div>
+</section>
+
+<section id="как" class="sec wrap">
+  <h2 data-reveal>Как записаться</h2>
+  <div class="steps">
+    <div data-reveal><h3 style="font-size:18px;margin-bottom:8px">Выберите услугу</h3><p>Маникюр, педикюр или дизайн, и мастера, который вам подходит.</p></div>
+    <div data-reveal style="--d:.1s"><h3 style="font-size:18px;margin-bottom:8px">Выберите время</h3><p>Свободные окна видны сразу, занятые серые.</p></div>
+    <div data-reveal style="--d:.2s"><h3 style="font-size:18px;margin-bottom:8px">Подтвердите в WhatsApp</h3><p>Заявка уходит мастеру, администратор ответит в переписке.</p></div>
+  </div>
+</section>
+
+<section id="запись" class="sec wrap">
+  <div class="split">
+    <div data-reveal><h2>Записаться</h2><p style="opacity:.75;max-width:40ch">Демо: форма показывает, как устроена запись. Реальный календарь подключается к CRM или сервису записи студии.</p></div>
+    <div data-reveal style="--d:.1s" data-booking></div>
+  </div>
+</section>
+
+<section id="контакты" class="sec wrap split">
+  <div data-reveal><h2>Контакты</h2><p>Адрес студии: укажите свой<br>Телефон: укажите свой<br>Работаем ежедневно, 10:00–21:00</p></div>
+  <div data-reveal style="--d:.1s"><p style="opacity:.75">Нужно перенести запись? Напишите в WhatsApp.</p></div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© Лаборатория лака · концепт, название условное</span><span>Сделано для демонстрации</span></div></footer>
+
+<script>
+window.SITE={whatsapp:'79000000000',hours:[10,21],step:60,closedDays:[],
+services:[
+ {name:'Маникюр с покрытием',minutes:90,price:'1 600 ₽'},
+ {name:'Педикюр с покрытием',minutes:90,price:'2 200 ₽'},
+ {name:'Дизайн ногтей',minutes:60,price:'от 300 ₽'},
+ {name:'Снятие покрытия',minutes:30,price:'400 ₽'}],
+masters:[{name:'Алина',role:'мастер-дизайнер'},{name:'Вера',role:'мастер маникюра'}]};
+</script>
+<script src="../_общее/kit.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Крем — торты на заказ · концепт</title>
+<meta name="description" content="Торты и десерты на заказ: выберите размер, вкус и дату. Заказ онлайн.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../_общее/kit.css">
+<style>
+:root{--bg:#fff3ec;--fg:#4a2630;--card:#fffaf7;--line:#f1d5c8;--accent:#e4577a;--on-accent:#fff;--radius:999px;--radius-lg:30px;--font-display:Marcellus,Georgia,serif;--font-body:Nunito,system-ui,sans-serif}
+h1,h2,h3{font-family:var(--font-display);font-weight:400;margin:0;line-height:1.1}
+.top{position:sticky;top:0;z-index:20;background:rgba(255,243,236,.94);backdrop-filter:blur(8px)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;height:72px}
+.logo{font-family:var(--font-display);font-size:24px;text-decoration:none}
+[data-nav]{display:flex;gap:24px;font-weight:700}[data-nav] a{text-decoration:none}[data-nav] a:hover{color:var(--accent)}
+.hero{padding:clamp(50px,8vw,100px) 0;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.hero h1{font-size:clamp(42px,6vw,80px)}
+.hero p{font-size:18px;opacity:.85;max-width:44ch;margin:22px 0 28px}
+.cake{position:relative;width:min(380px,80vw);aspect-ratio:1;margin-left:auto}
+.cake .tier{position:absolute;left:50%;transform:translateX(-50%);border-radius:24px 24px 14px 14px;background:linear-gradient(#fff,#ffd6c2)}
+.cake .t1{width:100%;height:30%;bottom:0;background:linear-gradient(#ffe7dc,#f5b3a0);animation:up 1.2s .1s both}
+.cake .t2{width:72%;height:24%;bottom:30%;animation:up 1.2s .3s both}
+.cake .t3{width:46%;height:18%;bottom:54%;animation:up 1.2s .5s both}
+@keyframes up{from{transform:translateX(-50%) translateY(40px);opacity:0}to{transform:translateX(-50%);opacity:1}}
+.cake .drip{position:absolute;bottom:58%;left:50%;width:46%;height:10px;transform:translateX(-50%);background:var(--accent);border-radius:0 0 12px 12px;animation:drip 3s ease-in-out infinite}
+@keyframes drip{0%,100%{transform:translateX(-50%) scaleY(1)}50%{transform:translateX(-50%) scaleY(1.3)}}
+.cake .candle{position:absolute;left:50%;bottom:76%;width:8px;height:44px;transform:translateX(-50%);background:#fff;border-radius:4px;box-shadow:inset 0 0 0 1px #f1d5c8}
+.cake .candle::after{content:"";position:absolute;left:50%;top:-18px;width:12px;height:18px;transform:translateX(-50%);border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:#ffb020;box-shadow:0 0 16px 4px rgba(255,176,32,.6);animation:flame 1.4s ease-in-out infinite}
+@keyframes flame{50%{transform:translateX(-50%) scale(.85,1.1)}}
+.btn{padding:15px 28px;font-weight:800}
+.sec{padding:clamp(54px,7vw,90px) 0}
+.sec h2{font-size:clamp(34px,4.4vw,54px);margin-bottom:28px;text-align:center}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--card);border-radius:var(--radius-lg);padding:30px 26px;border:1px solid var(--line);text-align:center;transition:transform .35s}
+.card:hover{transform:translateY(-6px)}
+.card h3{font-size:24px;margin-bottom:8px}
+.card p{margin:0 0 14px;opacity:.75;font-size:15px}
+.card b{color:var(--accent);font-size:20px}
+.calc{max-width:620px;margin:0 auto;background:var(--card);border-radius:var(--radius-lg);padding:30px;border:1px solid var(--line)}
+.calc label{display:block;font-weight:700;margin-bottom:8px}
+.calc input[type=range]{width:100%;accent-color:var(--accent)}
+.calc output{display:block;margin-top:14px;font-family:var(--font-display);font-size:30px;color:var(--accent)}
+.calc small{opacity:.65}
+footer{padding:34px 0;text-align:center;font-size:14px;opacity:.7}
+@media (max-width:900px){.hero,.grid{grid-template-columns:1fr}.cake{margin:0 auto}[data-nav]{display:none}}
+@media (max-width:820px){[data-nav].open{position:absolute;top:72px;left:0;right:0;background:var(--bg);padding:18px 4vw}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="#top">Крем</a>
+  <nav data-nav><a href="#витрина">Витрина</a><a href="#калькулятор">Калькулятор</a><a href="#заказ">Заказ</a></nav>
+  <button class="nav-toggle" data-nav-toggle aria-label="Меню" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div></header>
+
+<main id="top">
+<section class="hero wrap">
+  <div>
+    <h1 data-reveal>Торт, после которого <em style="font-style:normal;color:var(--accent)">все просят рецепт</em></h1>
+    <p data-reveal style="--d:.1s">Торты на день рождения, свадьбу и просто так. Выберите размер и вкус, посмотрите цену в калькуляторе и оставьте заказ на удобную дату.</p>
+    <a data-reveal style="--d:.2s" class="btn" href="#заказ" style="background:var(--accent);color:#fff;text-decoration:none;display:inline-block">Заказать торт</a>
+  </div>
+  <div data-reveal style="--d:.15s"><div class="cake" aria-hidden="true"><div class="tier t1"></div><div class="tier t2"></div><div class="tier t3"></div><div class="drip"></div><div class="candle"></div></div></div>
+</section>
+
+<section id="витрина" class="sec wrap">
+  <h2 data-reveal>Вкусы</h2>
+  <div class="grid">
+    <article class="card" data-reveal><h3>Ягодный чизкейк</h3><p>Сливочный крем, сезонные ягоды, песочная основа.</p><b>от 2 400 ₽</b></article>
+    <article class="card" data-reveal style="--d:.1s"><h3>Медовик</h3><p>Тонкие коржи, сметанный крем, карамель.</p><b>от 2 000 ₽</b></article>
+    <article class="card" data-reveal style="--d:.2s"><h3>Шоколадный трюфель</h3><p>Тёмный шоколад, мягкая ганаш, орех.</p><b>от 2 800 ₽</b></article>
+  </div>
+</section>
+
+<section id="калькулятор" class="sec wrap">
+  <h2 data-reveal>Калькулятор</h2>
+  <div class="calc" data-reveal>
+    <label for="w">Вес торта: <span id="wv">1.5</span> кг</label>
+    <input id="w" type="range" min="1" max="5" step="0.5" value="1.5">
+    <output id="price" aria-live="polite"></output>
+    <small>Цена ориентировочная: 2 000 ₽ за кг, дизайн считается отдельно.</small>
+  </div>
+</section>
+
+<section id="заказ" class="sec wrap">
+  <h2 data-reveal>Оформить заказ</h2>
+  <div data-reveal style="max-width:720px;margin:0 auto" data-booking></div>
+  <p style="text-align:center;opacity:.6;font-size:14px;margin-top:18px">Демо: заказ собирается в WhatsApp кондитерской. Заказы за сутки и больше принимаем, для срочных звоните.</p>
+</section>
+</main>
+
+<footer>© Крем · концепт-сайт, название условное · Сделано для демонстрации</footer>
+
+<script>
+window.SITE={whatsapp:'79000000000',hours:[10,20],step:60,closedDays:[],
+services:[
+ {name:'Торт, 1–2 кг',minutes:60,price:'от 2 000 ₽/кг'},
+ {name:'Торт с индивидуальным дизайном',minutes:120,price:'от 3 500 ₽/кг'},
+ {name:'Десерт-сет к чаю, на 6 человек',minutes:60,price:'от 2 400 ₽'}],
+masters:[]};
+(function(){var r=document.getElementById('w'),v=document.getElementById('wv'),o=document.getElementById('price');if(!r)return;function u(){var w=parseFloat(r.value);v.textContent=w.toFixed(1);o.textContent=Math.round(w*2000).toLocaleString('ru-RU')+' ₽';}r.addEventListener('input',u);u();})();
+</script>
+<script src="../_общее/kit.js"></script>
+</body>
+</html>

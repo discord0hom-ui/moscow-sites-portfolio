@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Улыбка — стоматология · концепт</title>
+<meta name="description" content="Стоматология: лечение, гигиена, брекеты. Запишитесь на консультацию онлайн.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../_общее/kit.css">
+<style>
+:root{--bg:#ffffff;--fg:#0f1d33;--card:#f4f7fc;--line:#dbe4f2;--accent:#2563eb;--on-accent:#fff;--radius:14px;--radius-lg:20px;--font-display:"Plus Jakarta Sans",system-ui,sans-serif;--font-body:"Plus Jakarta Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:var(--font-display);font-weight:800;margin:0;line-height:1.1;letter-spacing:-.02em}
+.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;height:70px}
+.logo{font-weight:800;text-decoration:none;display:flex;align-items:center;gap:8px}
+[data-nav]{display:flex;gap:24px;font-weight:600;font-size:15px}[data-nav] a{text-decoration:none;opacity:.8}[data-nav] a:hover{color:var(--accent);opacity:1}
+.hero{padding:clamp(50px,8vw,100px) 0;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.hero h1{font-size:clamp(40px,5.6vw,72px)}
+.hero p{font-size:18px;opacity:.8;max-width:44ch;margin:22px 0 30px}
+.smile{width:100%;max-width:420px;margin-left:auto}
+.smile path{stroke-dasharray:600;stroke-dashoffset:600;animation:draw 2.6s .3s ease forwards}
+.smile circle{animation:pop .6s both}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes pop{from{transform:scale(0);transform-origin:center;transform-box:fill-box}to{transform:scale(1)}}
+.btn{border-radius:12px;padding:15px 26px;font-weight:800}
+.sec{padding:clamp(54px,7vw,90px) 0}
+.sec h2{font-size:clamp(32px,4vw,48px);margin-bottom:28px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{background:var(--card);border-radius:var(--radius-lg);padding:28px;border:1px solid var(--line)}
+.step b{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:12px;background:var(--accent);color:#fff;font-size:18px;margin-bottom:16px}
+.step h3{font-size:20px;margin-bottom:8px}
+.step p{margin:0;opacity:.75}
+.list{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+.list div{display:flex;justify-content:space-between;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);font-size:17px}
+.list b{color:var(--accent);white-space:nowrap}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+footer{padding:34px 0;font-size:14px;opacity:.75;text-align:center}
+@media (max-width:900px){.hero,.split,.list{grid-template-columns:1fr}.steps{grid-template-columns:1fr}[data-nav]{display:none}}
+@media (max-width:820px){[data-nav].open{position:absolute;top:70px;left:0;right:0;background:#fff;padding:18px 4vw;border-bottom:1px solid var(--line)}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="#top">Улыбка</a>
+  <nav data-nav><a href="#услуги">Услуги</a><a href="#как">Как проходит приём</a><a href="#запись">Запись</a><a href="#контакты">Контакты</a></nav>
+  <button class="nav-toggle" data-nav-toggle aria-label="Меню" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div></header>
+
+<main id="top">
+<section class="wrap hero">
+  <div>
+    <h1 data-reveal>Спокойное лечение без <span style="color:var(--accent)">сюрпризов</span></h1>
+    <p data-reveal style="--d:.1s">Сначала объясняем, что нужно и сколько это стоит, потом делаем. Консультация и план лечения — в первый визит. Записаться можно онлайн.</p>
+    <a data-reveal style="--d:.2s" class="btn" href="#запись" style="background:var(--accent);color:#fff;text-decoration:none;display:inline-block">Записаться на консультацию</a>
+  </div>
+  <div data-reveal style="--d:.15s"><svg class="smile" viewBox="0 0 400 300" fill="none" aria-hidden="true">
+    <rect x="30" y="30" width="340" height="240" rx="50" fill="#f4f7fc"/>
+    <path d="M90 130 Q200 260 310 130" stroke="#2563eb" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="140" cy="100" r="12" fill="#2563eb"/><circle cx="260" cy="100" r="12" fill="#2563eb"/>
+  </svg></div>
+</section>
+
+<section id="услуги" class="sec wrap">
+  <h2 data-reveal>Цены на основные услуги</h2>
+  <div class="list" data-reveal>
+    <div><span>Консультация и осмотр</span><b>1 000 ₽</b></div>
+    <div><span>Профессиональная чистка</span><b>от 4 000 ₽</b></div>
+    <div><span>Лечение кариеса, пломба</span><b>от 5 500 ₽</b></div>
+    <div><span>Удаление зуба простое</span><b>от 3 500 ₽</b></div>
+    <div><span>Отбеливание</span><b>по плану</b></div>
+    <div><span>Консультация по брекетам</span><b>бесплатно</b></div>
+  </div>
+  <p style="opacity:.6;font-size:14px;margin-top:18px">Цены ориентировочные. Точную сумму врач назовёт до начала лечения.</p>
+</section>
+
+<section id="как" class="sec wrap">
+  <h2 data-reveal>Как проходит приём</h2>
+  <div class="steps">
+    <div class="step" data-reveal><b>1</b><h3>Осмотр и план</h3><p>Рентген при необходимости, план и стоимость до начала работ.</p></div>
+    <div class="step" data-reveal style="--d:.1s"><b>2</b><h3>Лечение</h3><p>Обезболивание, понятный ход работы, паузы по вашему желанию.</p></div>
+    <div class="step" data-reveal style="--d:.2s"><b>3</b><h3>Контроль</h3><p>Повторный осмотр и напоминания о гигиене дома.</p></div>
+  </div>
+</section>
+
+<section id="запись" class="sec wrap split">
+  <div data-reveal><h2>Записаться</h2><p style="opacity:.8;max-width:40ch">Выберите услугу, врача, день и время. Администратор подтвердит визит в WhatsApp.</p>
+    <p style="opacity:.6;font-size:14px">Демо: показано, как устроена запись. Календарь подключается к вашей CRM или сервису записи клиники.</p></div>
+  <div data-reveal style="--d:.1s" data-booking></div>
+</section>
+
+<section id="контакты" class="sec wrap split">
+  <div data-reveal><h2>Контакты</h2><p>Адрес: укажите свой<br>Телефон: укажите свой<br>Пн–Сб 9:00–20:00</p></div>
+  <div data-reveal style="--d:.1s"><p style="opacity:.8">Если болит прямо сейчас, позвоните: администратор подскажет, как быстро прийти.</p></div>
+</section>
+</main>
+
+<footer>© Улыбка · концепт-сайт, название условное · Сделано для демонстрации</footer>
+
+<script>
+window.SITE={whatsapp:'79000000000',hours:[9,20],step:60,closedDays:[0],
+services:[
+ {name:'Консультация и осмотр',minutes:40,price:'1 000 ₽'},
+ {name:'Профессиональная чистка',minutes:60,price:'от 4 000 ₽'},
+ {name:'Лечение кариеса, пломба',minutes:60,price:'от 5 500 ₽'},
+ {name:'Консультация по брекетам',minutes:30,price:'бесплатно'}],
+masters:[{name:'Врач Ольга Петрова',role:'терапевт'},{name:'Врач Андрей Смирнов',role:'терапевт'}]};
+</script>
+<script src="../_общее/kit.js"></script>
+</body>
+</html>

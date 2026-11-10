@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Language Lab — языковая школа · концепт</title>
+<meta name="description" content="Курсы английского для взрослых и детей. Пробный урок онлайн.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../_общее/kit.css">
+<style>
+:root{--bg:#fff7d6;--fg:#1d1f5c;--card:#fffdf2;--line:#f0e2a6;--accent:#2b2d7a;--on-accent:#fff;--radius:16px;--radius-lg:24px;--font-display:"Space Grotesk",system-ui,sans-serif;--font-body:Inter,system-ui,sans-serif}
+h1,h2,h3{font-family:var(--font-display);font-weight:700;margin:0;line-height:1.05;letter-spacing:-.02em}
+.top{position:sticky;top:0;z-index:20;background:rgba(255,247,214,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;height:70px}
+.logo{font-family:var(--font-display);font-weight:700;text-decoration:none;font-size:20px}
+.logo span{background:#ffb703;padding:0 6px;border-radius:8px}
+[data-nav]{display:flex;gap:24px;font-weight:500;font-size:15px}[data-nav] a{text-decoration:none}[data-nav] a:hover{text-decoration:underline;text-underline-offset:4px}
+.hero{position:relative;padding:clamp(60px,8vw,110px) 0;overflow:hidden}
+.bubble{position:absolute;border-radius:50%;background:#ffb703;opacity:.25;animation:rise 9s linear infinite}
+.bubble:nth-child(1){width:90px;height:90px;left:70%;bottom:-100px}
+.bubble:nth-child(2){width:40px;height:40px;left:84%;bottom:-60px;animation-delay:-3s;background:#2b2d7a;opacity:.15}
+.bubble:nth-child(3){width:60px;height:60px;left:58%;bottom:-80px;animation-delay:-6s}
+@keyframes rise{to{transform:translateY(-120vh)}}
+.hero h1{font-size:clamp(46px,7vw,96px);max-width:13ch}
+.hero h1 mark{background:#ffb703;color:var(--fg);padding:0 .1em;border-radius:.15em}
+.hero p{font-size:18px;opacity:.85;max-width:46ch;margin:22px 0 30px}
+.btn{padding:16px 28px;font-weight:700;border-radius:14px}
+.sec{padding:clamp(54px,7vw,90px) 0}
+.sec h2{font-size:clamp(34px,4.4vw,54px);margin-bottom:28px}
+.courses{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.course{background:var(--card);border:1.5px solid var(--line);border-radius:var(--radius-lg);padding:28px;transition:transform .3s,border-color .3s}
+.course:hover{transform:translateY(-6px) rotate(-.6deg);border-color:var(--accent)}
+.course .lvl{display:inline-block;padding:4px 12px;border-radius:999px;background:#ffb703;font-weight:700;font-size:13px;margin-bottom:14px}
+.course h3{font-size:24px;margin-bottom:10px}
+.course p{margin:0 0 16px;opacity:.75;font-size:15px}
+.course b{font-family:var(--font-display);font-size:24px;color:var(--accent)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+.test{background:var(--accent);color:#fff;border-radius:var(--radius-lg);padding:34px}
+.test h3{font-size:30px;margin-bottom:10px}
+.test p{opacity:.85;margin:0 0 18px}
+footer{padding:34px 0;text-align:center;font-size:14px;opacity:.7;border-top:1px solid var(--line)}
+@media (max-width:900px){.courses,.split{grid-template-columns:1fr}[data-nav]{display:none}}
+@media (max-width:820px){[data-nav].open{position:absolute;top:70px;left:0;right:0;background:var(--bg);padding:18px 4vw;border-bottom:1px solid var(--line)}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="#top">Language <span>Lab</span></a>
+  <nav data-nav><a href="#курсы">Курсы</a><a href="#тест">Определить уровень</a><a href="#запись">Пробный урок</a></nav>
+  <button class="nav-toggle" data-nav-toggle aria-label="Меню" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div></header>
+
+<main id="top">
+<section class="hero wrap">
+  <span class="bubble"></span><span class="bubble"></span><span class="bubble"></span>
+  <h1 data-reveal>Английский, на котором <mark>хочется говорить</mark></h1>
+  <p data-reveal style="--d:.1s">Маленькие группы, живая речь с первого занятия и преподаватели, которые исправляют мягко. Пробный урок бесплатный, попробуйте в удобное время.</p>
+  <a data-reveal style="--d:.2s" class="btn" href="#запись" style="background:var(--accent);color:#fff;text-decoration:none;display:inline-block">Пробный урок</a>
+</section>
+
+<section id="курсы" class="sec wrap">
+  <h2 data-reveal>Курсы</h2>
+  <div class="courses">
+    <article class="course" data-reveal><span class="lvl">A1–A2</span><h3>Старт</h3><p>Базовая грамматика и разговорные ситуации.</p><b>от 6 000 ₽/мес</b></article>
+    <article class="course" data-reveal style="--d:.1s"><span class="lvl">B1–B2</span><h3>Уверенный разговор</h3><p>Дискуссии, работа, путешествия, выступления.</p><b>от 7 500 ₽/мес</b></article>
+    <article class="course" data-reveal style="--d:.2s"><span class="lvl">Дети 7–12</span><h3>Junior</h3><p>Игры, проекты и разговорная практика.</p><b>от 5 500 ₽/мес</b></article>
+  </div>
+</section>
+
+<section id="тест" class="sec wrap">
+  <div class="test" data-reveal>
+    <h3>Не знаете свой уровень?</h3>
+    <p>Пройдите короткую встречу с преподавателем. Это 20 минут, без оценки и без обязательств.</p>
+    <a class="btn" href="#запись" style="background:#fff;color:var(--accent);text-decoration:none;display:inline-block">Записаться на проверку уровня</a>
+  </div>
+</section>
+
+<section id="запись" class="sec wrap">
+  <div class="split">
+    <div data-reveal><h2>Пробный урок</h2><p style="opacity:.8;line-height:1.6">Выберите курс, преподавателя, день и время. Подтверждение придёт в WhatsApp.</p>
+      <p style="opacity:.6;font-size:14px">Демо: показано, как устроена запись. Календарь подключается к расписанию школы.</p></div>
+    <div data-reveal style="--d:.1s" data-booking></div>
+  </div>
+</section>
+</main>
+
+<footer>© Language Lab · концепт-сайт, название условное · Сделано для демонстрации</footer>
+
+<script>
+window.SITE={whatsapp:'79000000000',hours:[9,21],step:60,closedDays:[],
+services:[
+ {name:'Пробный урок, взрослые',minutes:60,price:'бесплатно'},
+ {name:'Пробный урок, дети 7–12',minutes:60,price:'бесплатно'},
+ {name:'Проверка уровня, 20 минут',minutes:30,price:'бесплатно'}],
+masters:[{name:'Ксения',role:'преподаватель'},{name:'Майкл',role:'преподаватель, носитель'}]};
+</script>
+<script src="../_общее/kit.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Пудра — салон красоты · концепт</title>
+<meta name="description" content="Салон красоты: стрижки, окрашивание, уход. Онлайн-запись к мастеру за 1 минуту.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../_общее/kit.css">
+<style>
+:root{--bg:#f6efe8;--fg:#2a1f1c;--card:#fffaf5;--line:#e3d4c8;--accent:#b5676d;--on-accent:#fff;--radius:999px;--radius-lg:26px;--font-display:"Cormorant Garamond",Georgia,serif;--font-body:Manrope,system-ui,sans-serif}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;line-height:1.05;margin:0}
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{font-family:var(--font-display);font-size:28px;font-style:italic;text-decoration:none}
+[data-nav]{display:flex;gap:26px;font-size:15px}
+[data-nav] a{text-decoration:none;opacity:.8}[data-nav] a:hover{opacity:1;color:var(--accent)}
+.hero{padding:clamp(60px,9vw,120px) 0 80px;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.hero h1{font-size:clamp(52px,8vw,108px)}
+.hero h1 em{color:var(--accent)}
+.lead{font-size:18px;max-width:46ch;opacity:.85;margin:24px 0 34px}
+.arch{position:relative;aspect-ratio:3/4;border-radius:300px 300px 26px 26px;overflow:hidden;background:linear-gradient(160deg,#e8c9bd,#c98f86 55%,#7c4a4d);animation:drift 9s ease-in-out infinite}
+.arch::after{content:"";position:absolute;inset:auto -20% -30% -20%;height:60%;background:radial-gradient(closest-side,rgba(255,240,230,.55),transparent);animation:shine 6s ease-in-out infinite}
+.arch .tag{position:absolute;left:22px;bottom:22px;background:var(--card);padding:12px 18px;border-radius:16px;font-size:14px;box-shadow:0 14px 30px -18px #000}
+@keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes shine{0%,100%{transform:translateX(-10%)}50%{transform:translateX(10%)}}
+.marquee{overflow:hidden;border-block:1px solid var(--line);padding:18px 0;font-family:var(--font-display);font-size:30px;font-style:italic;white-space:nowrap}
+.marquee div{display:inline-block;animation:run 28s linear infinite}
+.marquee span{margin:0 26px;color:var(--accent)}
+@keyframes run{to{transform:translateX(-50%)}}
+.sec{padding:clamp(60px,8vw,110px) 0}
+.sec h2{font-size:clamp(40px,5vw,64px);margin-bottom:12px}
+.split{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:start}
+.price{list-style:none;padding:0;margin:0}
+.price li{display:flex;justify-content:space-between;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);font-size:17px;transition:padding .3s}
+.price li:hover{padding-left:12px;color:var(--accent)}
+.price small{opacity:.6;display:block;font-size:13px}
+.masters{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.m{background:var(--card);border-radius:22px;padding:22px;border:1px solid var(--line);transition:transform .35s}
+.m:hover{transform:translateY(-6px)}
+.m .av{width:76px;height:76px;border-radius:50%;background:linear-gradient(135deg,#e8c9bd,var(--accent));margin-bottom:16px}
+.m b{font-family:var(--font-display);font-size:24px;display:block}
+.m small{opacity:.65}
+footer{padding:40px 0;border-top:1px solid var(--line);font-size:14px;opacity:.85}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media (max-width:900px){.hero,.split{grid-template-columns:1fr}.masters{grid-template-columns:1fr}[data-nav]{display:none}}
+@media (max-width:820px){[data-nav].open{position:absolute;top:70px;left:0;right:0;background:var(--bg);padding:20px 4vw;border-bottom:1px solid var(--line)}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="#top">Пудра</a>
+  <nav data-nav><a href="#услуги">Услуги</a><a href="#мастера">Мастера</a><a href="#запись">Запись</a><a href="#контакты">Контакты</a></nav>
+  <button class="nav-toggle" data-nav-toggle aria-label="Меню" aria-expanded="false">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+</div></header>
+
+<main id="top">
+<section class="wrap hero">
+  <div>
+    <p data-reveal style="letter-spacing:.2em;font-size:13px;text-transform:uppercase;opacity:.7">Салон красоты · Самара</p>
+    <h1 data-reveal style="--d:.1s">Волосы, которые <em>хочется</em> трогать</h1>
+    <p data-reveal class="lead" style="--d:.2s">Стрижка, окрашивание и уход от мастеров, которые ведут клиента с первого визита. Выберите время онлайн — подтверждение придёт в WhatsApp.</p>
+    <div data-reveal style="--d:.3s;display:flex;gap:14px;flex-wrap:wrap">
+      <a class="btn" href="#запись">Записаться</a>
+      <a class="btn btn-ghost" href="#услуги">Смотреть цены</a>
+    </div>
+  </div>
+  <div data-reveal style="--d:.15s"><div class="arch"><div class="tag"><b>Окрашивание</b><br>от 3 200 ₽ · 2 часа</div></div></div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div>
+  <span>Стрижка</span>✦<span>Окрашивание</span>✦<span>Уход</span>✦<span>Укладка</span>✦<span>Стрижка</span>✦<span>Окрашивание</span>✦<span>Уход</span>✦<span>Укладка</span>✦
+  <span>Стрижка</span>✦<span>Окрашивание</span>✦<span>Уход</span>✦<span>Укладка</span>✦<span>Стрижка</span>✦<span>Окрашивание</span>✦<span>Уход</span>✦<span>Укладка</span>✦
+</div></div>
+
+<section id="услуги" class="sec wrap split">
+  <div data-reveal>
+    <h2>Услуги и цены</h2>
+    <p style="opacity:.8;max-width:40ch">Цены ориентировочные: точную стоимость мастер назовёт после консультации.</p>
+  </div>
+  <ul class="price" data-reveal style="--d:.1s">
+    <li><span>Стрижка женская<small>60 минут</small></span><b>от 1 500 ₽</b></li>
+    <li><span>Окрашивание в один тон<small>2 часа</small></span><b>от 3 200 ₽</b></li>
+    <li><span>Сложное окрашивание<small>3–4 часа</small></span><b>от 6 000 ₽</b></li>
+    <li><span>Уходовая процедура<small>45 минут</small></span><b>от 1 800 ₽</b></li>
+    <li><span>Укладка<small>40 минут</small></span><b>от 1 100 ₽</b></li>
+  </ul>
+</section>
+
+<section id="мастера" class="sec wrap">
+  <h2 data-reveal>Мастера</h2>
+  <div class="masters">
+    <article class="m" data-reveal><div class="av"></div><b>Анна</b><small>Колорист · 9 лет в профессии</small></article>
+    <article class="m" data-reveal style="--d:.1s"><div class="av"></div><b>Мария</b><small>Стилист · стрижки и укладки</small></article>
+    <article class="m" data-reveal style="--d:.2s"><div class="av"></div><b>Ольга</b><small>Мастер ухода · процедуры для волос</small></article>
+  </div>
+</section>
+
+<section id="запись" class="sec wrap">
+  <div class="split">
+    <div data-reveal>
+      <h2>Запись онлайн</h2>
+      <p style="opacity:.8;max-width:40ch">Выберите услугу, мастера, день и время. Заявка уходит в WhatsApp салона — администратор подтверждает запись.</p>
+      <p style="opacity:.6;font-size:14px">Демо: форма показывает, как устроена запись. Реальный календарь подключается к вашей CRM или сервису записи.</p>
+    </div>
+    <div data-reveal style="--d:.1s" data-booking></div>
+  </div>
+</section>
+
+<section id="контакты" class="sec wrap">
+  <div class="split">
+    <div data-reveal>
+      <h2>Где мы</h2>
+      <p>Адрес салона: укажите свой<br>Телефон: укажите свой<br>Часы: ежедневно 10:00–20:00</p>
+    </div>
+    <div data-reveal style="--d:.1s"><p>Если хотите перенести или отменить запись, напишите в WhatsApp: ответим в рабочее время.</p></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© Пудра · концепт-сайт, названия и цены условные</span><span>Сделано для демонстрации</span></div></footer>
+
+<script>
+window.SITE={whatsapp:'79000000000',hours:[10,20],step:60,closedDays:[0],
+services:[
+ {name:'Стрижка женская',minutes:60,price:'от 1 500 ₽'},
+ {name:'Окрашивание в один тон',minutes:120,price:'от 3 200 ₽'},
+ {name:'Уходовая процедура',minutes:45,price:'от 1 800 ₽'},
+ {name:'Укладка',minutes:40,price:'от 1 100 ₽'}],
+masters:[{name:'Анна',role:'колорист'},{name:'Мария',role:'стилист'},{name:'Ольга',role:'мастер ухода'}]};
+</script>
+<script src="../_общее/kit.js"></script>
+</body>
+</html>
