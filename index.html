@@ -3,62 +3,383 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Портфолио: 17 готовых сайтов · концепты</title>
-<meta name="description" content="17 готовых сайтов для малого бизнеса: онлайн-запись, анимация, адаптация под телефон.">
-<meta name="robots" content="noindex">
-<style>
-:root{--bg:#f6f5f2;--fg:#191919;--card:#fff;--line:#e4e2dc;--muted:#6b6a66}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,"Segoe UI",Roboto,sans-serif;line-height:1.5}
-.wrap{width:min(1160px,92vw);margin-inline:auto}
-header{padding:64px 0 28px}
-h1{font-size:clamp(34px,5vw,56px);margin:0 0 14px;letter-spacing:-.02em}
-header p{color:var(--muted);max-width:62ch;margin:0;font-size:17px}
-.tools{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;font-size:14px;color:var(--muted)}
-.tools span{border:1px solid var(--line);border-radius:999px;padding:6px 12px;background:var(--card)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;padding:30px 0 60px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
-.card:hover{transform:translateY(-4px);box-shadow:0 20px 36px -26px rgba(0,0,0,.35)}
-.swatch{height:120px;position:relative;background:var(--c1)}
-.swatch::after{content:"";position:absolute;left:18px;right:18px;bottom:-14px;height:28px;border-radius:14px;background:var(--c2)}
-.body{padding:24px 22px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
-.num{font-size:12px;color:var(--muted);letter-spacing:.08em}
-h2{font-size:21px;margin:0}
-.niche{font-size:14px;color:var(--muted)}
-.idea{font-size:15px;margin:8px 0 14px;flex:1}
-.links{display:flex;gap:14px;font-size:14px;font-weight:600}
-.links a{color:var(--fg);text-decoration:none;border-bottom:1.5px solid var(--c2);padding-bottom:2px}
-.links a:hover{color:var(--c2)}
-footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--muted);font-size:14px}
-</style>
+<title>Сайты и Telegram-боты для малого бизнеса — разработка под ключ</title>
+<meta name="description" content="Сайты с онлайн-записью, Telegram-боты и автоматизация для малого бизнеса. Один исполнитель: структура, дизайн, код, запуск на сервере, поддержка.">
+<meta name="theme-color" content="#f4f1ea">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Сайты и Telegram-боты для малого бизнеса">
+<meta property="og:description" content="Онлайн-запись, боты, интеграции и запуск. Один исполнитель, исходники у вас.">
+<meta property="og:locale" content="ru_RU">
 </head>
 <body>
-<header><div class="wrap">
-  <h1>17 готовых сайтов</h1>
-  <p>Каждый сайт — отдельная ниша и свой дизайн. У всех есть онлайн-запись (выбор услуги, мастера, дня и времени, заявка в WhatsApp), анимация при прокрутке и версия для телефона.</p>
-  <div class="tools"><span>Запись онлайн</span><span>Анимация</span><span>Телефон и компьютер</span><span>Без сервера</span><span>Тексты и цены условные</span></div>
-</div></header>
+<a class="skip" href="#main">К содержанию</a>
 
-<main class="wrap"><div class="grid">
-  <a class="card" href="sites/01-салон-красоты/index.html" style="--c1:#e8c9bd;--c2:#b5676d;color:inherit;text-decoration:none"><div class="swatch"></div><div class="body"><span class="num">01</span><h2>Пудра</h2><span class="niche">Салон красоты</span><p class="idea">Арочный кадр, бегущая строка услуг, запись к мастеру в четыре шага.</p><div class="links"><span>Открыть сайт</span></div></div></a>
-  <a class="card" href="sites/02-барбершоп/index.html" style="--c1:#1b1f1c;--c2:#c8a24a;color:inherit;text-decoration:none"><div class="swatch"></div><div class="body"><span class="num">02</span><h2>Кросс</h2><span class="niche">Барбершоп</span><p class="idea">Полоса-«барберский столб» в логотипе, прайс-таблица, мастера в ряд, запись по 30 минут.</p><div class="links"><span>Открыть сайт</span></div></div></a>
-  <a class="card" href="sites/03-маникюр/index.html" style="--c1:#d9c6ff;--c2:#7b4bd6;color:inherit;text-decoration:none"><div class="swatch"></div><div class="body"><span class="num">03</span><h2>Лаборатория лака</h2><span class="niche">Маникюр</span><p class="idea">Флаконы-карточки услуг, плавающие фоновые пятна, запись с первого экрана.</p><div class="links"><span>Открыть сайт</span></div></div></a>
-  <a class="card" href="sites/04-йога/index.html" style="--c1:#c9d8c6;--c2:#5b7f63;color:inherit;text-decoration:none"><div class="swatch"></div><div class="body"><span class="num">04</span><h2>Дыхание</h2><span class="niche">Студия йоги</span><p class="idea">Круг, который дышит, расписание недели и пробное занятие.</p><div class="links"><span>Открыть сайт</span></div></div></a>
-  <a class="card" href="sites/05-массаж/index.html" style="--c1:#f0c9b4;--c2:#b4553a;color:inherit;text-decoration:none"><div class="swatch"></div><div class="body"><span class="num">05</span><h2>Тёплые руки</h2><span class="niche">Массаж</span><p class="idea">Арки, поднимающиеся по очереди, виды массажа и памятка перед сеансом.</p><div class="links"><span>Открыть сайт</span></div></div></a>
-  <a class="card" href="sites/06-ветклиника/index.html" style="--c1:#cbe6e4;--c2:#0f8b8d;color:inherit;text-decoration:none"><div class="swatch"></div><div class="body"><span class="num">06</span><h2>Хвост</h2><span class="niche">Ветклиника</span><p class="idea">Статус «принимаем сейчас» по местному времени, лапа-иконка, четыре услуги.</p><div class="links"><span>Открыть сайт</span></div></div></a>
-  <a class="card" href="sites/07-стоматология/index.html" style="--c1:#dbe4f2;--c2:#2563eb;color:inherit;text-decoration:none"><div class="swatch"></div><div class="body"><span class="num">07</span><h2>Улыбка</h2><span class="niche">Стоматология</span><p class="idea">Улыбка, которая рисуется при загрузке, прайс-список и три шага приёма.</p><div class="links"><span>Открыть сайт</span></div></div></a>
-  <a class="card" href="sites/08-детейлинг/index.html" style="--c1:#161616;--c2:#ffd400;color:inherit;text-decoration:none"><div class="swatch"></div><div class="body"><span class="num">08</span><h2>Блеск</h2><span class="niche">Детейлинг и тонировка</span><p class="idea">Блик по экрану, сравнение «до и после», прайс строками.</p><div class="links"><span>Открыть сайт</span></div></div></a>
-  <a class="card" href="sites/09-кофейня/index.html" style="--c1:#3d2d24;--c2:#d89b4a;color:inherit;text-decoration:none"><div class="swatch"></div><div class="body"><span class="num">09</span><h2>Пар</h2><span class="niche">Кофейня</span><p class="idea">Анимированный пар над чашкой, меню с точками-лидерами, бронь столика.</p><div class="links"><span>Открыть сайт</span></div></div></a>
-  <a class="card" href="sites/10-персональный-тренер/index.html" style="--c1:#18181d;--c2:#ff5a1f;color:inherit;text-decoration:none"><div class="swatch"></div><div class="body"><span class="num">10</span><h2>Ритм</h2><span class="niche">Персональный тренер</span><p class="idea">Бегущая строка, счётчики при появлении, программы и пробная тренировка.</p><div class="links"><span>Открыть сайт</span></div></div></a>
-  <a class="card" href="sites/11-тату/index.html" style="--c1:#131313;--c2:#e0313b;color:inherit;text-decoration:none"><div class="swatch"></div><div class="body"><span class="num">11</span><h2>Линия</h2><span class="niche">Тату-студия</span><p class="idea">Линия подчёркивает слово в заголовке, эскизы рисуются при прокрутке.</p><div class="links"><span>Открыть сайт</span></div></div></a>
-  <a class="card" href="sites/12-фотостудия/index.html" style="--c1:#d9d9d4;--c2:#111111;color:inherit;text-decoration:none"><div class="swatch"></div><div class="body"><span class="num">12</span><h2>Кадр</h2><span class="niche">Фотостудия</span><p class="idea">Затвор открывается и рамка съёмки собирается по углам, форматы и бронь.</p><div class="links"><span>Открыть сайт</span></div></div></a>
-  <a class="card" href="sites/13-клининг/index.html" style="--c1:#dff5f1;--c2:#17a391;color:inherit;text-decoration:none"><div class="swatch"></div><div class="body"><span class="num">13</span><h2>Чисто дома</h2><span class="niche">Клининг</span><p class="idea">Блик протирает карточку, три пакета уборки, фиксированная цена.</p><div class="links"><span>Открыть сайт</span></div></div></a>
-  <a class="card" href="sites/14-кондитерская/index.html" style="--c1:#ffe7dc;--c2:#e4577a;color:inherit;text-decoration:none"><div class="swatch"></div><div class="body"><span class="num">14</span><h2>Крем</h2><span class="niche">Торты на заказ</span><p class="idea">Торт с горящей свечой и каплей, калькулятор по весу, заказ в WhatsApp.</p><div class="links"><span>Открыть сайт</span></div></div></a>
-  <a class="card" href="sites/15-психолог/index.html" style="--c1:#e3dccd;--c2:#3b5b7a;color:inherit;text-decoration:none"><div class="swatch"></div><div class="body"><span class="num">15</span><h2>Опора</h2><span class="niche">Психолог</span><p class="idea">Спокойная колонка текста, темы обращений, вопросы в раскрывающихся блоках.</p><div class="links"><span>Открыть сайт</span></div></div></a>
-  <a class="card" href="sites/16-языковая-школа/index.html" style="--c1:#fff0a8;--c2:#2b2d7a;color:inherit;text-decoration:none"><div class="swatch"></div><div class="body"><span class="num">16</span><h2>Language Lab</h2><span class="niche">Языковая школа</span><p class="idea">Пузыри на фоне, курсы по уровням, блок «определить уровень».</p><div class="links"><span>Открыть сайт</span></div></div></a>
-  <a class="card" href="sites/17-цветочная-мастерская/index.html" style="--c1:#e7efe6;--c2:#2f5d46;color:inherit;text-decoration:none"><div class="swatch"></div><div class="body"><span class="num">17</span><h2>Травинка</h2><span class="niche">Цветочная мастерская</span><p class="idea">Букет собирается из лепестков при загрузке, подписка и заказ.</p><div class="links"><span>Открыть сайт</span></div></div></a>
-</div></main>
+<header class="site-head" id="top">
+  <div class="wrap head-in">
+    <a class="brand" href="#top" aria-label="На главную">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name" data-site-name>Разработка сайтов и ботов</span>
+    </a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#services">Услуги</a>
+      <a href="#work">Работы</a>
+      <a href="#process">Процесс</a>
+      <a href="#prices">Цены</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <a class="btn btn-sm" href="#contact">Написать</a>
+  </div>
+</header>
 
-<footer><div class="wrap">Все сайты — концепты для демонстрации. Названия, адреса, телефоны, цены и фото условные: их нужно заменить данными конкретного клиента. Номер WhatsApp в каждом сайте — заглушка.</div></footer>
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap hero-in">
+      <div class="hero-main">
+        <p class="kicker">Разработка · Telegram · автоматизация</p>
+        <h1>Сайты и боты, которые снимают с вас <em>ручную работу</em></h1>
+        <p class="lead">Собираю сайты с онлайн-записью, Telegram-ботов и небольшие автоматизации для малого бизнеса. Один исполнитель, без посредников: от структуры и дизайна до запуска на сервере и передачи доступов.</p>
+        <div class="cta-row">
+          <a class="btn" href="#contact">Обсудить задачу</a>
+          <a class="link-arrow" href="#work">Смотреть работы <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+
+      <aside class="hero-side" aria-label="Коротко о работе">
+        <div class="side-row">
+          <span class="side-k">Срок</span>
+          <span class="side-v">5–10 дней — сайт, 7–14 — бот</span>
+        </div>
+        <div class="side-row">
+          <span class="side-k">Формат</span>
+          <span class="side-v">Смета и прототип до начала работ</span>
+        </div>
+        <div class="side-row">
+          <span class="side-k">Что остаётся вам</span>
+          <span class="side-v">Исходники, домен, доступы, инструкция</span>
+        </div>
+      </aside>
+    </div>
+
+    <div class="wrap">
+      <ul class="facts" aria-label="Ключевые факты">
+        <li><b>17</b> демонстрационных сайтов в разных нишах</li>
+        <li><b>2</b> Telegram-сервиса с кодом, тестами и Docker</li>
+        <li><b>1</b> исполнитель на всех этапах</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="sec-num">01 — Услуги</p>
+        <h2>Четыре задачи, которые чаще всего просят решить</h2>
+        <p class="sec-note">Если ваша задача не попадает ни в один пункт — напишите, скажу прямо, берусь или нет.</p>
+      </div>
+
+      <div class="services">
+        <article class="service">
+          <p class="service-num">01</p>
+          <h3>Сайт с онлайн-записью</h3>
+          <p class="service-lead">Лендинг или сайт-визитка, где клиент сам выбирает услугу, мастера и время. Заявка уходит туда, где вам удобно: WhatsApp, Telegram или CRM.</p>
+          <ul class="ticks">
+            <li>Структура, тексты, дизайн под вашу нишу</li>
+            <li>Форма записи с валидацией и защитой от спама</li>
+            <li>Адаптив, скорость, базовое SEO, запуск</li>
+          </ul>
+          <p class="service-meta"><span>5–10 дней</span><span>от 30 000 ₽</span></p>
+        </article>
+
+        <article class="service">
+          <p class="service-num">02</p>
+          <h3>Telegram-бот</h3>
+          <p class="service-lead">Запись, напоминания, оплата, админ-панель. Бот ведёт клиента по шагам и снимает с администратора переписку и таблицы.</p>
+          <ul class="ticks">
+            <li>Сценарии, состояния, валидация данных</li>
+            <li>Календарь и защита от двойной записи</li>
+            <li>Роли, уведомления, статистика, миграции</li>
+          </ul>
+          <p class="service-meta"><span>7–14 дней</span><span>от 40 000 ₽</span></p>
+        </article>
+
+        <article class="service">
+          <p class="service-num">03</p>
+          <h3>Автоматизация и интеграции</h3>
+          <p class="service-lead">Связываю сайт, бота, таблицы и CRM, чтобы заявки и отчёты не переносили руками. Часто это 1–2 сценария, а не «цифровая трансформация».</p>
+          <ul class="ticks">
+            <li>Приём заявок из форм и мессенджеров в одну точку</li>
+            <li>Выгрузки, отчёты, уведомления по расписанию</li>
+            <li>Разбор рутины: что стоит автоматизировать, а что нет</li>
+          </ul>
+          <p class="service-meta"><span>3–10 дней</span><span>от 25 000 ₽</span></p>
+        </article>
+
+        <article class="service">
+          <p class="service-num">04</p>
+          <h3>Запуск и инфраструктура</h3>
+          <p class="service-lead">Сервер, домен, HTTPS, бэкапы и мониторинг. Чтобы проект не «упал в пятницу вечером» и не требовал вашего участия.</p>
+          <ul class="ticks">
+            <li>Docker, автозапуск, логи, резервные копии</li>
+            <li>Домен, DNS, почта, сертификаты</li>
+            <li>Короткая инструкция: что делать, если что-то отвалилось</li>
+          </ul>
+          <p class="service-meta"><span>1–3 дня</span><span>от 12 000 ₽</span></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="work">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="sec-num">02 — Работы</p>
+        <h2>Что можно посмотреть прямо сейчас</h2>
+        <p class="sec-note">Здесь только то, что действительно собрано: демо-концепты и шаблоны с кодом. Коммерческих внедрений с чужими логотипами и цифрами не приписываю.</p>
+      </div>
+
+      <div class="work-grid">
+        <article class="work work-wide" style="--plate:#e7e2d4">
+          <div class="plate" aria-hidden="true">
+            <span class="plate-big">17</span>
+            <span class="plate-cap">сайтов · 17 ниш</span>
+          </div>
+          <div class="work-body">
+            <div class="work-top">
+              <h3>Демо-библиотека сайтов</h3>
+              <span class="chip">демо-концепты</span>
+            </div>
+            <p>17 страниц для разных ниш: салон, барбершоп, детейлинг, кофейня, ветклиника, студия йоги и другие. Одинаковый сценарий записи, разные визуальные решения.</p>
+            <dl class="work-spec">
+              <div><dt>Задача</dt><dd>показать, как выглядит запись в конкретной нише, до начала работ</dd></div>
+              <div><dt>Внутри</dt><dd>запись в 4 шага, адаптив, анимации на скролле, без сервера</dd></div>
+              <div><dt>Стек</dt><dd>HTML, CSS, JavaScript</dd></div>
+            </dl>
+            <a class="link-arrow" href="demo/index.html">Открыть библиотеку <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="work" style="--plate:#dfe6dc">
+          <div class="plate" aria-hidden="true">
+            <span class="plate-big">бот</span>
+            <span class="plate-cap">aiogram · PostgreSQL</span>
+          </div>
+          <div class="work-body">
+            <div class="work-top">
+              <h3>Бот записи для салона</h3>
+              <span class="chip">шаблон с тестами</span>
+            </div>
+            <p>Клиент записывается сам, админ видит календарь и ведёт статусы. Свободное время проверяется повторно в транзакции, поэтому два клиента не займут один слот.</p>
+            <dl class="work-spec">
+              <div><dt>Внутри</dt><dd>FSM, слоты, напоминания, роли, миграции, тесты</dd></div>
+              <div><dt>Стек</dt><dd>Python, aiogram 3, SQLAlchemy, Docker</dd></div>
+            </dl>
+            <p class="work-note">Не внедрённый клиентский проект — шаблон, который адаптируется под салон за несколько дней.</p>
+          </div>
+        </article>
+
+        <article class="work" style="--plate:#e6ded3">
+          <div class="plate" aria-hidden="true">
+            <span class="plate-big">mini</span>
+            <span class="plate-cap">Telegram Mini App</span>
+          </div>
+          <div class="work-body">
+            <div class="work-top">
+              <h3>Mini App для подписок</h3>
+              <span class="chip">шаблон</span>
+            </div>
+            <p>Витрина тарифов внутри Telegram: выбор плана, оплата, выдача доступа и продление. Backend, мини-приложение и инструкция по развёртыванию.</p>
+            <dl class="work-spec">
+              <div><dt>Внутри</dt><dd>тарифы, платежи, статусы подписки, админка</dd></div>
+              <div><dt>Стек</dt><dd>Telegram WebApp, REST API, Docker</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="work work-wide" style="--plate:#e9e3d6">
+          <div class="plate" aria-hidden="true">
+            <span class="plate-big">₽</span>
+            <span class="plate-cap">калькулятор → заявка</span>
+          </div>
+          <div class="work-body">
+            <div class="work-top">
+              <h3>Калькулятор стоимости с заявкой</h3>
+              <span class="chip">демо</span>
+            </div>
+            <p>Клиент выбирает услуги и класс автомобиля, сразу видит цену и отправляет готовый расчёт в WhatsApp. Меньше вопросов «а сколько будет стоить?» в переписке.</p>
+            <dl class="work-spec">
+              <div><dt>Задача</dt><dd>снять с администратора первичный расчёт стоимости</dd></div>
+              <div><dt>Внутри</dt><dd>конфигуратор услуг, расчёт, готовое сообщение в WhatsApp</dd></div>
+              <div><dt>Стек</dt><dd>HTML, CSS, JavaScript</dd></div>
+            </dl>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="process">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="sec-num">03 — Процесс</p>
+        <h2>Как проходит работа</h2>
+        <p class="sec-note">Без брифов на 40 страниц. Достаточно 30 минут разговора и доступов.</p>
+      </div>
+
+      <ol class="steps">
+        <li>
+          <p class="step-num">01</p>
+          <h3>Разбор</h3>
+          <p>Смотрю, что уже есть, и задаю вопросы по делу: откуда приходят клиенты, где теряются заявки, что должно измениться после запуска.</p>
+          <p class="step-out">Итог: понятная задача и вилка цены</p>
+        </li>
+        <li>
+          <p class="step-num">02</p>
+          <h3>Прототип</h3>
+          <p>Структура страницы или сценарий бота, первый экран и смета. Правки на этом этапе дешевле всего — поэтому он идёт первым.</p>
+          <p class="step-out">Итог: прототип, смета, срок</p>
+        </li>
+        <li>
+          <p class="step-num">03</p>
+          <h3>Сборка</h3>
+          <p>Делаю по этапам и показываю рабочие ссылки, а не скриншоты. Правки собираю в один список, чтобы не переделывать одно и то же.</p>
+          <p class="step-out">Итог: рабочая версия на тестовом адресе</p>
+        </li>
+        <li>
+          <p class="step-num">04</p>
+          <h3>Запуск и передача</h3>
+          <p>Домен, HTTPS, бэкапы, проверка на телефонах. Передаю доступы и короткую инструкцию. Дальше — по желанию: поддержка или полная передача вам.</p>
+          <p class="step-out">Итог: проект в работе, доступы у вас</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="prices">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="sec-num">04 — Цены</p>
+        <h2>Сколько это стоит</h2>
+        <p class="sec-note">Ниже — ориентиры, чтобы вы понимали порядок сумм. Точная цена зависит от количества экранов, сценариев и интеграций.</p>
+      </div>
+
+      <div class="prices">
+        <article class="price">
+          <h3>Сайт</h3>
+          <p class="price-num">от 30 000 ₽</p>
+          <p class="price-term">5–10 дней</p>
+          <ul class="ticks">
+            <li>До 5 блоков или 4 страницы</li>
+            <li>Форма записи или заявки</li>
+            <li>Адаптив и базовое SEO</li>
+            <li>Запуск на вашем домене</li>
+          </ul>
+        </article>
+
+        <article class="price">
+          <h3>Бот</h3>
+          <p class="price-num">от 40 000 ₽</p>
+          <p class="price-term">7–14 дней</p>
+          <ul class="ticks">
+            <li>Один сценарий целиком: запись или оплата</li>
+            <li>Админ-панель и уведомления</li>
+            <li>База данных, миграции, деплой</li>
+            <li>Инструкция для администратора</li>
+          </ul>
+        </article>
+
+        <article class="price">
+          <h3>Автоматизация</h3>
+          <p class="price-num">от 25 000 ₽</p>
+          <p class="price-term">3–10 дней</p>
+          <ul class="ticks">
+            <li>1–2 сценария под ключ</li>
+            <li>Интеграция с сайтом, ботом, таблицами</li>
+            <li>Логи и обработка ошибок</li>
+            <li>Короткая документация</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="price-notes">
+        <p><b>Оплата:</b> 50% перед началом, остальное после приёмки. Счёт или договор — по запросу.</p>
+        <p><b>Что не входит:</b> домен, хостинг, платные сервисы и подписки оплачиваются отдельно по факту.</p>
+        <p><b>Поддержка:</b> 30 дней гарантии на ошибки после запуска, дальше — от 5 000 ₽ в месяц по желанию.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="wrap faq-wrap">
+      <div class="section-head">
+        <p class="sec-num">05 — Вопросы</p>
+        <h2>Что обычно спрашивают</h2>
+      </div>
+
+      <div class="faq">
+        <details>
+          <summary>Сколько времени займёт работа?</summary>
+          <p>Типовой сайт — 5–10 дней, бот — 7–14. Срок фиксирую после прототипа: до этого он зависит от объёма. Если нужно к конкретной дате, скажите сразу — честно отвечу, успеваем или нет.</p>
+        </details>
+        <details>
+          <summary>Что нужно от меня?</summary>
+          <p>Три вещи: 30 минут на разговор, доступы (домен, хостинг, аккаунты) и материалы — тексты, фото, прайс. Если текстов нет, соберу черновик и покажу, что стоит уточнить.</p>
+        </details>
+        <details>
+          <summary>Кто пишет код и кому он принадлежит?</summary>
+          <p>Я пишу сам, без подрядчиков и «команды». После полной оплаты исходники и доступы ваши: можно передать другому разработчику или развивать самостоятельно.</p>
+        </details>
+        <details>
+          <summary>Сколько правок входит в цену?</summary>
+          <p>Два круга правок на этапе прототипа и один — после сборки. Дальше по часовой ставке. Это не жадность: так проще заранее договориться, что именно меняем.</p>
+        </details>
+        <details>
+          <summary>Что с доменом и хостингом?</summary>
+          <p>Помогу выбрать и настроить, но оплачиваете их вы, на свои аккаунты. Так доступы остаются у вас, а не у меня. Ориентир: домен — около 1 000 ₽ в год, сервер — от 500 ₽ в месяц.</p>
+        </details>
+        <details>
+          <summary>Что будет после запуска?</summary>
+          <p>30 дней гарантии: исправляю ошибки, которые относятся к моей работе, бесплатно. Дальше — поддержка по желанию или полная передача проекта вам с инструкцией.</p>
+        </details>
+        <details>
+          <summary>Может, мне вообще не нужен сайт?</summary>
+          <p>Бывает. Если заявок мало, а трафик уже есть, иногда достаточно починить форму или добавить запись в существующий сайт. Скажу об этом прямо, даже если сделка будет меньше.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="wrap contact-in">
+      <div>
+        <p class="sec-num">06 — Контакты</p>
+        <h2>Начнём с короткого разбора</h2>
+        <p class="lead">Расскажите, что за бизнес и что не устраивает сейчас. Отвечу в течение дня, задам пару вопросов и скажу, что имеет смысл делать — и сколько это будет стоить.</p>
+        <p class="contact-hint">Если не готовы к разговору, пришлите ссылку на сайт или описание задачи в мессенджер — этого достаточно для первого ответа.</p>
+      </div>
+
+      <div class="channels" aria-label="Способы связи">
+        <a class="channel" data-channel="telegram" hidden href="#"><span class="ch-k">Telegram</span><span class="ch-v">быстрее всего</span></a>
+        <a class="channel" data-channel="whatsapp" hidden href="#"><span class="ch-k">WhatsApp</span><span class="ch-v">если так удобнее</span></a>
+        <a class="channel" data-channel="email" hidden href="#"><span class="ch-k">Почта</span><span class="ch-v">для документов</span></a>
+        <a class="channel" data-channel="github" hidden href="#"><span class="ch-k">GitHub</span><span class="ch-v">код и шаблоны</span></a>
+        <p class="channels-empty" hidden>Каналы связи подключаются.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-in">
+    <p><span data-site-name>Разработка сайтов и ботов</span> · <span data-year>2026</span></p>
+    <p class="foot-note">Демонстрационные материалы помечены как демо или шаблоны. Названия компаний, цены и отзывы в демо — условные.</p>
+    <a class="foot-top" href="#top">Наверх ↑</a>
+  </div>
+</footer>
+
+<script src="site.config.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
