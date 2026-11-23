@@ -43,7 +43,9 @@ git push origin main
 ```
 
 Затем Settings → Pages → Source: `Deploy from a branch`, ветка `main`, папка `/ (root)`.
-Сайт будет на `https://<username>.github.io/moscow-sites-portfolio/`.
+
+**Сайт уже опубликован:** https://discord0hom-ui.github.io/moscow-sites-portfolio/
+(ветка `main`, папка `/`, сборка Pages проходит успешно).
 
 Вариант 2 — любой статический хостинг (Netlify, Cloudflare Pages, VPS): загрузить корень репозитория.
 
